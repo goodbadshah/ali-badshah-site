@@ -214,7 +214,7 @@ export default function LumiiiCaseStudy() {
       <footer className="py-10 px-6 bg-neutral-950 text-neutral-600">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-sm font-bold uppercase tracking-wide">
-            &copy; {new Date().getFullYear()} Ali Badshah. All rights reserved.
+            &copy; 2026 Fulstakt. All rights reserved.
           </p>
         </div>
       </footer>

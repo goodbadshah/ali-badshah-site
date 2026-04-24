@@ -31,6 +31,7 @@ export default function Home() {
                 <p className="text-large text-white/80">
                   AI-native product designer, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
                 </p>
+                {/* Place the AI chat here */}
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div className="bg-white rounded-2xl p-4 lg:p-6 text-center">
@@ -68,68 +69,55 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            {[
-              {
-                title: "HalalYouNeed",
-                subtitle: "Gamified Islamic Prayer App",
-                summary: "Solo-shipped from concept to App Store. AI-native workflow. 60% free-to-paid conversion at launch.",
-                href: "/work/halalyouneed",
-                img: "/images/work-halalyouneed.png",
-                gradient: "linear-gradient(135deg, #0d0303 0%, #4a0f0f 60%, #bb3535 100%)",
-              },
-              {
-                title: "Lumiii",
-                subtitle: "Anime Brand & Gamified UNSDG Platform",
-                summary: "Won 2022 World EdTech Startup Challenge. Evidence-based research via UCL. Raised $800K.",
-                href: "/work/lumiii",
-                img: "/images/work-lumiii.png",
-                gradient: "linear-gradient(135deg, #0d0520 0%, #2d1b69 60%, #5b21b6 100%)",
-              },
-              {
-                title: "Ghost Flowers",
-                subtitle: "#1 Bestselling Book",
-                summary: "Wrote, designed, built the website, optimised the Amazon listing, and ran the email campaign to a #1 debut.",
-                href: "/work/ghost-flowers",
-                img: "/images/work-ghostflowers.png",
-                gradient: "linear-gradient(135deg, #0f0e0d 0%, #292524 60%, #57534e 100%)",
-              },
-            ].map((project) => (
-              <a
-                key={project.href}
-                href={project.href}
-                className="group relative aspect-square overflow-hidden rounded-2xl block"
-              >
-                <div
-                  className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-                  style={{ background: project.gradient }}
-                />
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: "rgba(0, 0, 0, 0.85)" }}
-                />
-                <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-8">
-                  <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                    <h3 className="text-white text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight">
-                      {project.title}
-                    </h3>
-                    <p className="text-white/80 text-sm font-bold uppercase tracking-wide mt-2">
-                      {project.subtitle}
-                    </p>
-                    <p className="text-white/70 text-sm leading-relaxed mt-3">
-                      {project.summary}
-                    </p>
-                    <div className="flex items-center gap-2 text-white text-sm font-bold uppercase tracking-wide mt-5 transition-transform duration-200">
-                      View Case Study <span className="group-hover:translate-x-1 inline-block transition-transform duration-200">→</span>
-                    </div>
+
+            <a href="/work/halalyouneed" className="group relative aspect-square overflow-hidden rounded-2xl block">
+              <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0d0303 0%, #4a0f0f 60%, #bb3535 100%)" }} />
+              <img src="/images/work-halalyouneed.png" alt="HalalYouNeed" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
+              <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-8">
+                <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                  <h3 className="text-white text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight">HalalYouNeed</h3>
+                  <p className="text-white/80 text-sm font-bold uppercase tracking-wide mt-2">Gamified Islamic Prayer App</p>
+                  <p className="text-white/70 text-sm leading-relaxed mt-3">Solo-shipped from concept to App Store. AI-native workflow. 60% free-to-paid conversion at launch.</p>
+                  <div className="flex items-center gap-2 text-white text-sm font-bold uppercase tracking-wide mt-5 transition-transform duration-200">
+                    View Case Study <span className="group-hover:translate-x-1 inline-block transition-transform duration-200">→</span>
                   </div>
                 </div>
-              </a>
-            ))}
+              </div>
+            </a>
+
+            <a href="/work/lumiii" className="group relative aspect-square overflow-hidden rounded-2xl block">
+              <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0d0520 0%, #2d1b69 60%, #5b21b6 100%)" }} />
+              <img src="/images/work-lumiii.png" alt="Lumiii" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
+              <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-8">
+                <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                  <h3 className="text-white text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight">Lumiii</h3>
+                  <p className="text-white/80 text-sm font-bold uppercase tracking-wide mt-2">Anime Brand & Gamified UNSDG Platform</p>
+                  <p className="text-white/70 text-sm leading-relaxed mt-3">Won 2022 World EdTech Startup Challenge. Evidence-based research via UCL. Raised $800K.</p>
+                  <div className="flex items-center gap-2 text-white text-sm font-bold uppercase tracking-wide mt-5 transition-transform duration-200">
+                    View Case Study <span className="group-hover:translate-x-1 inline-block transition-transform duration-200">→</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="/work/ghost-flowers" className="group relative aspect-square overflow-hidden rounded-2xl block">
+              <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0f0e0d 0%, #292524 60%, #57534e 100%)" }} />
+              <img src="/images/work-ghostflowers.png" alt="Ghost Flowers" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
+              <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-8">
+                <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                  <h3 className="text-white text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight">Ghost Flowers</h3>
+                  <p className="text-white/80 text-sm font-bold uppercase tracking-wide mt-2">#1 Bestselling Book</p>
+                  <p className="text-white/70 text-sm leading-relaxed mt-3">Wrote, designed, built the website, optimised the Amazon listing, and ran the email campaign to a #1 debut.</p>
+                  <div className="flex items-center gap-2 text-white text-sm font-bold uppercase tracking-wide mt-5 transition-transform duration-200">
+                    View Case Study <span className="group-hover:translate-x-1 inline-block transition-transform duration-200">→</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
           </div>
         </div>
       </section>
@@ -195,7 +183,7 @@ export default function Home() {
 
       <footer className="py-12 px-6 bg-gray-900 text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="font-bold uppercase">&copy 2026 Fulstakt. All rights reserved.</p>
+          <p className="font-bold uppercase">&copy; 2026 Fulstakt. All rights reserved.</p>
         </div>
       </footer>
     </div>
