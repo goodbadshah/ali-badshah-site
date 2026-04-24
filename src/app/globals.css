@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'ali-coopbl';
+  src: url('/fonts/COOPBL.woff') format('woff'),
+       url('/fonts/COOPBL.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --red-hero: #bb3535;
+  --red-light: #d46868;
+  --red-dark: #a72f2f;
+  --red-deeper: #7f2424;
+}
+
+body {
+  background: #fff;
+  color: #0a0a0a;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  scrollbar-gutter: stable;
+}
+
+.heading-section {
+  font-size: 1.875rem;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .heading-section { font-size: 3rem; }
+}
+
+@media (min-width: 1024px) {
+  .heading-section { font-size: 3.75rem; }
+}
+
+.ali-custom-font {
+  font-family: 'ali-coopbl', system-ui, sans-serif;
+  font-weight: normal;
+}
+
+.text-large {
+  font-size: 1.25rem;
+  line-height: 1.625;
+  font-weight: 500;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .text-large { font-size: 1.5rem; }
+}
+
+.text-red {
+  color: var(--red-hero);
+}
+
+.btn-red,
+.btn-red-light {
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-size: 1.125rem;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.btn-red { background: var(--red-hero); color: #fff; }
+.btn-red-light { background: var(--red-light); color: #000; }
+
+.btn-red:hover,
+.btn-red-light:hover {
+  filter: brightness(0.9);
+  transform: translateY(-1px);
+}
+
+.block-red { background: var(--red-hero); }
+.block-red-light { background: var(--red-light); }
+.block-red-dark { background: var(--red-dark); }
+.block-red-deeper { background: var(--red-deeper); }
+
+.float-element {
+  animation: float-element 4s ease-in-out infinite;
+}
+
+@keyframes float-element {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+.ticker {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.ticker-logo {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .ticker-logo {
+    height: 1.5rem;
+    max-height: 1.5rem;
+  }
+}
