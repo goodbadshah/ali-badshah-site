@@ -1,54 +1,33 @@
-"use client";
-import { useState, useEffect } from "react";
-
 export default function Home() {
-  const [viewCount, setViewCount] = useState(0);
-  const [followerCount, setFollowerCount] = useState(0);
-
-  useEffect(() => {
-    let views = 0;
-    let followers = 0;
-    const interval = setInterval(() => {
-      views = Math.min(views + 2, 100);
-      followers = Math.min(followers + 500, 25000);
-      setViewCount(views);
-      setFollowerCount(followers);
-      if (views >= 100 && followers >= 25000) clearInterval(interval);
-    }, 50);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="min-h-screen">
       <section className="relative block-red px-6 pt-52 pb-16 md:pb-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full">
             <div className="space-y-8">
-              <div className="space-y-4">
+              <div className="flex flex-col gap-10">
                 <h2 className="heading-section text-white ali-custom-font">
-                  Build a product, write a novel, lose 30 pounds, fall in love, and save the world in 90 days!*<span className="text-xs text-white/60 ml-1">*results may vary</span>
+                  <span className="whitespace-nowrap">Build a product,</span> write a novel, lose 30 pounds, fall in love, and save the world in 90 days!*<span className="text-xs text-white/60 ml-1 whitespace-nowrap"> *results may vary</span>
                 </h2>
-                <p className="text-large text-white/80">
+                <p className="text-base md:text-lg text-white/80 font-medium leading-relaxed">
                   AI-native product designer, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
                 </p>
-                {/* Place the AI chat here */}
-              </div>
-              <div className="grid grid-cols-3 gap-4">
-                <div className="bg-white rounded-2xl p-4 lg:p-6 text-center">
-                  <div className="text-lg lg:text-3xl font-black text-gray-900">{viewCount}M+</div>
-                  <div className="text-xs font-bold text-gray-500 uppercase">Views</div>
-                </div>
-                <div className="bg-white rounded-2xl p-4 lg:p-6 text-center">
-                  <div className="text-lg lg:text-3xl font-black text-gray-900">{followerCount.toLocaleString()}+</div>
-                  <div className="text-xs font-bold text-gray-500 uppercase">Followers</div>
-                </div>
-                <div className="bg-white rounded-2xl p-4 lg:p-6 text-center">
-                  <div className="text-lg lg:text-3xl font-black text-gray-900">#1</div>
-                  <div className="text-xs font-bold text-gray-500 uppercase">Bestselling Author</div>
+                <div className="w-full px-5 pt-4 pb-4 rounded-3xl border border-white/30 bg-black/20 cursor-default">
+                  <p className="text-white/50 text-base font-medium mb-3 flex items-center">
+                    <span className="inline-block w-px h-5 bg-white/60 mr-px" style={{ animation: 'cursor-blink 1s step-end infinite' }} />
+                    Ask how Ali is the right fit for you...
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <button type="button" className="px-3.5 py-1.5 rounded-lg border border-white/20 bg-black/25 text-white/60 text-xs font-semibold whitespace-nowrap hover:bg-black/35 transition-colors duration-150 cursor-default">Hiring manager?</button>
+                    <button type="button" className="px-3.5 py-1.5 rounded-lg border border-white/20 bg-black/25 text-white/60 text-xs font-semibold whitespace-nowrap hover:bg-black/35 transition-colors duration-150 cursor-default">Founder?</button>
+                    <button type="button" className="px-3.5 py-1.5 rounded-lg border border-white/20 bg-black/25 text-white/60 text-xs font-semibold whitespace-nowrap hover:bg-black/35 transition-colors duration-150 cursor-default">Producer or casting director?</button>
+                    <button type="button" className="px-3.5 py-1.5 rounded-lg border border-white/20 bg-black/25 text-white/60 text-xs font-semibold whitespace-nowrap hover:bg-black/35 transition-colors duration-150 cursor-default">Need coaching?</button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center">
+            <div className="flex flex-col gap-6 mt-8 lg:mt-0">
               <img
                 src="/images/ali-badshah-photo-06.png"
                 alt="Ali Badshah"

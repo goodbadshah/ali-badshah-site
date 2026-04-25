@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 @font-face {
   font-family: 'ali-coopbl';
   src: url('/fonts/COOPBL.woff') format('woff'),
@@ -24,7 +29,7 @@ body {
 }
 
 .heading-section {
-  font-size: 1.875rem;
+  font-size: 2.25rem;
   font-weight: 900;
   line-height: 1.25;
   letter-spacing: -0.025em;
@@ -37,7 +42,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .heading-section { font-size: 3.75rem; }
+  .heading-section { font-size: 3rem; }
 }
 
 .ali-custom-font {
