@@ -167,15 +167,12 @@ export default function Home() {
       <section className="relative block-red flex items-center justify-center px-6 py-8 md:py-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div className="space-y-6">
+            <div className="flex justify-center order-2 lg:order-1">
+              <img src="/images/ali-badshah-photo-02.png" alt="Ali Badshah" className="w-full max-w-sm rounded-3xl float-element shadow-2xl" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
+            </div>
+            <div className="space-y-6 order-1 lg:order-2">
               <h2 className="heading-section text-white ali-custom-font">LET'S<br />CONNECT</h2>
               <p className="text-large text-white/90">Whether you're hiring, collaborating, or just want to talk about building things that matter.</p>
-            </div>
-            <div className="space-y-6">
-              <button className="btn-red-light w-full">GET IN TOUCH</button>
-              <div className="flex justify-center">
-                <img src="/images/ali-badshah-photo-02.png" alt="Ali Badshah" className="w-full max-w-sm rounded-3xl float-element shadow-2xl" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
-              </div>
             </div>
           </div>
         </div>
