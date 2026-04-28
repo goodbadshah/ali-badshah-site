@@ -106,7 +106,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div className="space-y-3">
               <h2 className="heading-section text-white ali-custom-font">ENTERTAINMENT<br />EXCELLENCE</h2>
-              <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Lead in Oscar-nominated "The Breadwinner", 50+ film and TV credits including Netflix, Fox, CBS shows, and 5 televised comedy specials.</p>
+              <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Lead in Oscar-nominated "The Breadwinner", 40+ film and TV credits including Netflix, Fox, CBS shows, and 5 televised comedy specials.</p>
             </div>
             <div className="flex justify-center">
               <img src="/images/ali-badshah-photo-03.png" alt="Ali Badshah" className="rounded-3xl w-full max-w-md float-element" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
