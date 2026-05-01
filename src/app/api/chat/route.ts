@@ -14,15 +14,26 @@ const anthropic = new Anthropic({
 })
 
 export async function POST(request: Request) {
+  if (!process.env.ANTHROPIC_API_KEY) {
+    console.error('[chat API] ANTHROPIC_API_KEY is not set')
+    return new Response('Server misconfigured', { status: 500 })
+  }
+
   const { messages, userMessage } = (await request.json()) as {
     messages: ChatMessage[]
     userMessage: string
   }
 
-  const systemPrompt = fs.readFileSync(
-    path.join(process.cwd(), 'ai-context.md'),
-    'utf-8'
-  )
+  let systemPrompt: string
+  try {
+    systemPrompt = fs.readFileSync(
+      path.join(process.cwd(), 'ai-context.md'),
+      'utf-8'
+    )
+  } catch (err) {
+    console.error('[chat API] failed to read ai-context.md:', err)
+    return new Response('Context file unavailable', { status: 500 })
+  }
 
   const stream = anthropic.messages.stream({
     model: 'claude-sonnet-4-6',
@@ -43,6 +54,7 @@ export async function POST(request: Request) {
           }
         }
       } catch (err) {
+        console.error('[chat API] stream error:', err)
         controller.error(err)
         return
       }
