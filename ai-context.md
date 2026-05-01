@@ -45,7 +45,7 @@ Ali wrote and performed regularly on Video on Trial, Bell Media and MuchMusic's 
 
 ### Film and television
 
-Ali voiced Nurullah in The Breadwinner (2017), the Irish-Canadian animated feature directed by Nora Twomey and produced by Angelina Jolie. The film received an Academy Award nomination for Best Animated Feature. Ali received a Behind the Voice Actors nomination for Best Vocal Ensemble.
+Ali played the male lead, Nurullah, in The Breadwinner (2017), the Irish-Canadian animated feature directed by Nora Twomey and produced by Angelina Jolie. He was billed as a lead. The film received an Academy Award nomination for Best Animated Feature. Ali received a Behind the Voice Actors nomination for Best Vocal Ensemble.
 
 He has 40+ credits across CBS, FOX, Netflix, Disney, Adult Swim, and CBC. Notable work includes Doomsday Brothers (Adult Swim, ACTRA Award nomination for Outstanding Performance, Male Voice), Bakugan (14 episodes, 2023-2024), Kim's Convenience, Workin' Moms, Y: The Last Man, Accused, and Ghosts. He has performed alongside Whitney Cummings, Gerry Dee, Reggie Watts, Gina Yashere, Dave Merheje, Nathan Macintosh, Dana Alexander, and many others across five televised comedy specials on CBC, CTV, The Comedy Network, MTV, and ABC2 Australia. Comedy remains a living part of his life. His satirical TikToks have generated millions of views.
 
@@ -94,10 +94,11 @@ Earlier credits sometimes appear under variations: Ali Rizvi, Ali Rizvi Badshah,
 
 ### Feature Film
 
-- The Breadwinner (2017) — Nurullah and Talib Security Man (voice). Oscar-nominated animated feature directed by Nora Twomey, produced by Angelina Jolie. Behind the Voice Actors nomination, Best Vocal Ensemble.
+- The Breadwinner (2017) — Nurullah, the male lead, billed as Lead (voice). Oscar-nominated animated feature directed by Nora Twomey, produced by Angelina Jolie. Behind the Voice Actors nomination, Best Vocal Ensemble.
 - Tehranto (2022) — Fred Moridi.
 - This Place (2022) — Habib.
 - Feel the Beat (2020) — Royalton Dad #1.
+- Shazam! (2019) — Interviewee (character role, not a self appearance). Directed by David F. Sandberg.
 - Moon Point (2011) — Mukhtar (credited as King Ali Badshah).
 
 ### Television — Live Action
@@ -145,7 +146,6 @@ Earlier credits sometimes appear under variations: Ali Rizvi, Ali Rizvi Badshah,
 - Second City's Next Comedy Legend (2007) — Self (credited as Ali Rizvi). 5 episodes.
 - Great Canadian Laugh Off (2007) — Self / Comedian (credited as Ali Rizvi). 1 episode.
 - Street Eats (2007, uncredited) — Self / Host.
-- Shazam! (2019) — Interviewee.
 
 ### Off-IMDb credits (radio, digital, festival)
 
