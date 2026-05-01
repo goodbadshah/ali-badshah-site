@@ -23,6 +23,7 @@ export default function HeroChat() {
   const [isPending, setIsPending] = useState(false)
   const [isStreaming, setIsStreaming] = useState(false)
   const [showJumpPill, setShowJumpPill] = useState(false)
+  const [isFocused, setIsFocused] = useState(false)
 
   const threadRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -216,6 +217,7 @@ export default function HeroChat() {
     (isStreaming && (!lastMessage || lastMessage.role === 'user' || lastMessage.content === ''))
 
   const canSubmit = input.trim().length > 0 && !isBusy
+  const showFauxCaret = !input && !isFocused && !isBusy
 
   return (
     <div className="relative w-full px-5 pt-4 pb-4 rounded-3xl border border-white/15 bg-[#1a0707] transition-shadow duration-150 focus-within:ring-1 focus-within:ring-white/40 focus-within:border-white/30">
@@ -282,26 +284,42 @@ export default function HeroChat() {
         )}
 
         <div className="flex items-end gap-2">
-          <textarea
-            ref={inputRef}
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            disabled={isBusy && !isStreaming}
-            rows={1}
-            placeholder="Ask how Ali is the right fit for you..."
-            className="flex-1 bg-transparent text-white placeholder:text-white/50 text-base font-medium resize-none outline-none disabled:opacity-60 leading-6"
-            style={{ maxHeight: TEXTAREA_MAX_HEIGHT }}
-          />
+          <div className="relative flex-1">
+            <textarea
+              ref={inputRef}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onFocus={() => setIsFocused(true)}
+              onBlur={() => setIsFocused(false)}
+              onKeyDown={handleKeyDown}
+              disabled={isBusy && !isStreaming}
+              rows={1}
+              placeholder={showFauxCaret ? '' : 'Ask how Ali is the right fit for you...'}
+              className="block w-full bg-transparent text-white placeholder:text-white/50 text-base font-medium resize-none outline-none disabled:opacity-60 leading-6 p-0 m-0"
+              style={{ maxHeight: TEXTAREA_MAX_HEIGHT }}
+            />
+            {showFauxCaret && (
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 flex items-start text-base font-medium leading-6 text-white/50"
+              >
+                <span
+                  className="inline-block w-px h-5 bg-white/70 mr-1"
+                  style={{ animation: 'cursor-blink 1.06s step-end infinite' }}
+                />
+                Ask how Ali is the right fit for you...
+              </div>
+            )}
+          </div>
           {isBusy ? (
             <button
               type="button"
               onClick={stopGeneration}
               aria-label="Stop generating"
               title="Stop"
-              className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center bg-white text-black hover:bg-white/90 transition-colors"
+              className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center bg-white text-black hover:bg-white/90 transition-colors"
             >
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
                 <rect width="10" height="10" rx="1.5" />
               </svg>
             </button>
@@ -313,11 +331,11 @@ export default function HeroChat() {
               title="Send · Enter"
               className={
                 canSubmit
-                  ? 'shrink-0 w-9 h-9 rounded-full flex items-center justify-center bg-white text-black hover:bg-white/90 transition-colors'
-                  : 'shrink-0 w-9 h-9 rounded-full flex items-center justify-center border border-white/15 bg-white/5 text-white/40 cursor-not-allowed transition-colors'
+                  ? 'shrink-0 w-11 h-11 rounded-full flex items-center justify-center bg-white text-black hover:bg-white/90 transition-colors'
+                  : 'shrink-0 w-11 h-11 rounded-full flex items-center justify-center border border-white/15 bg-white/5 text-white/40 cursor-not-allowed transition-colors'
               }
             >
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M7 12V2M7 2L2.5 6.5M7 2l4.5 4.5" />
               </svg>
             </button>
