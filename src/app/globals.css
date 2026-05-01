@@ -5,6 +5,11 @@
   50% { opacity: 0; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .float-element { animation: none; }
+  [style*="cursor-blink"] { animation: none !important; }
+}
+
 @font-face {
   font-family: 'ali-coopbl';
   src: url('/fonts/COOPBL.woff') format('woff'),

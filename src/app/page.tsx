@@ -1,3 +1,5 @@
+import HeroChat from "@/components/HeroChat";
+
 export default function Home() {
 
   return (
@@ -13,18 +15,7 @@ export default function Home() {
                 <p className="text-base md:text-lg text-white/80 font-medium leading-relaxed">
                   AI-native product designer, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
                 </p>
-                <div className="w-full px-5 pt-4 pb-4 rounded-3xl border border-white/30 bg-black/20 cursor-default">
-                  <p className="text-white/50 text-base font-medium mb-3 flex items-center">
-                    <span className="inline-block w-px h-5 bg-white/60 mr-px" style={{ animation: 'cursor-blink 1s step-end infinite' }} />
-                    Ask how Ali is the right fit for you...
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <button type="button" className="px-3.5 py-1.5 rounded-lg border border-white/20 bg-black/25 text-white/60 text-xs font-semibold whitespace-nowrap hover:bg-black/35 transition-colors duration-150 cursor-default">Hiring manager?</button>
-                    <button type="button" className="px-3.5 py-1.5 rounded-lg border border-white/20 bg-black/25 text-white/60 text-xs font-semibold whitespace-nowrap hover:bg-black/35 transition-colors duration-150 cursor-default">Founder?</button>
-                    <button type="button" className="px-3.5 py-1.5 rounded-lg border border-white/20 bg-black/25 text-white/60 text-xs font-semibold whitespace-nowrap hover:bg-black/35 transition-colors duration-150 cursor-default">Producer or casting director?</button>
-                    <button type="button" className="px-3.5 py-1.5 rounded-lg border border-white/20 bg-black/25 text-white/60 text-xs font-semibold whitespace-nowrap hover:bg-black/35 transition-colors duration-150 cursor-default">Need coaching?</button>
-                  </div>
-                </div>
+                <HeroChat />
               </div>
             </div>
             <div className="flex flex-col gap-6 mt-8 lg:mt-0">
