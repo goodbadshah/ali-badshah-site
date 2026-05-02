@@ -236,8 +236,8 @@ export default function HeroChat() {
                 <div
                   className={
                     m.role === 'user'
-                      ? 'max-w-[85%] text-sm md:text-base text-white bg-white/15 border border-white/20 px-3.5 py-2 rounded-2xl whitespace-pre-wrap'
-                      : 'max-w-[62ch] text-base font-medium text-white whitespace-pre-wrap leading-6'
+                      ? 'max-w-[85%] text-sm md:text-base text-white bg-white/15 border border-white/20 px-3.5 py-2 rounded-2xl whitespace-pre-wrap break-words'
+                      : 'max-w-[62ch] text-base font-medium text-white whitespace-pre-wrap break-words leading-6'
                   }
                 >
                   {m.content}
@@ -284,7 +284,7 @@ export default function HeroChat() {
         )}
 
         <div className="flex items-end gap-2">
-          <div className="relative flex-1">
+          <div className="relative flex-1 min-w-0">
             <textarea
               ref={inputRef}
               value={input}
@@ -295,7 +295,7 @@ export default function HeroChat() {
               disabled={isBusy && !isStreaming}
               rows={1}
               placeholder={showFauxCaret ? '' : 'Ask how Ali is the right fit for you...'}
-              className="block w-full bg-transparent text-white placeholder:text-white/50 text-base font-medium resize-none outline-none disabled:opacity-60 leading-6 p-0 m-0"
+              className="block w-full bg-transparent text-white placeholder:text-white/50 text-base font-medium resize-none outline-none disabled:opacity-60 leading-6"
               style={{ maxHeight: TEXTAREA_MAX_HEIGHT }}
             />
             {showFauxCaret && (
@@ -307,7 +307,7 @@ export default function HeroChat() {
                   className="inline-block w-px h-5 bg-white/70 mr-1"
                   style={{ animation: 'cursor-blink 1.06s step-end infinite' }}
                 />
-                Ask how Ali is the right fit for you...
+                <span className="truncate">Ask how Ali is the right fit for you...</span>
               </div>
             )}
           </div>
@@ -317,6 +317,7 @@ export default function HeroChat() {
               onClick={stopGeneration}
               aria-label="Stop generating"
               title="Stop"
+              style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
               className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center bg-white text-black hover:bg-white/90 transition-colors"
             >
               <svg width="12" height="12" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
@@ -327,11 +328,17 @@ export default function HeroChat() {
             <button
               type="submit"
               disabled={!canSubmit}
+              onClick={(e) => {
+                if (!canSubmit) return
+                e.preventDefault()
+                sendMessage(input)
+              }}
               aria-label="Send message"
               title="Send · Enter"
+              style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
               className={
                 canSubmit
-                  ? 'shrink-0 w-11 h-11 rounded-full flex items-center justify-center bg-white text-black hover:bg-white/90 transition-colors'
+                  ? 'shrink-0 w-11 h-11 rounded-full flex items-center justify-center bg-white text-black hover:bg-white/90 transition-colors active:bg-white/80'
                   : 'shrink-0 w-11 h-11 rounded-full flex items-center justify-center border border-white/15 bg-white/5 text-white/40 cursor-not-allowed transition-colors'
               }
             >
