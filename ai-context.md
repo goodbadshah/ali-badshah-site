@@ -80,7 +80,7 @@ Ali co-founded Secret Pirates Entertainment and built Lumiii, an impact story wo
 Ali founded Fulstakt Inc. as an AI-native product studio. Active ventures:
 
 - HalalYouNeed (HYN): Gamified Islamic prayer and habit app for Muslim families. Solo-shipped from concept to App Store in under 90 days. 60% free-to-paid conversion at launch. 5-star rating. 1.8B+ TAM. Full case study: https://ali-badshah-site.vercel.app/work/halalyouneed
-- PhantomFlow: GUI-based autonomous pipeline system that runs product operations, content creation, and distribution. Multi-agent orchestration, with open-source models like Kimi to keep token costs down. Currently being built as an in-house proof of concept against Fulstakt's shipped products. Productizing in late 2026.
+- PhantomFlow (in development, not yet shipped): GUI-based autonomous pipeline system designed to run product operations, content creation, and distribution. Multi-agent orchestration, with open-source models like Kimi to keep token costs down. Currently being built as an in-house proof of concept against Fulstakt's shipped products. Productizing in late 2026. Do not describe PhantomFlow as shipped, live, running, or in use. It is pre-release.
 - Scalpatron: Algorithmic order-flow scalping system running autonomously on a VPS.
 - IronXP: Progressive overload lifting app for serious fitness practitioners.
 - SymptomSleuth: Health-focused app with an AI diagnostic chat feature.
