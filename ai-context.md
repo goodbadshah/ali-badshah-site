@@ -27,7 +27,7 @@ A common misconception is that he is teflon. He isn't. He works the heaviness ou
 
 Asked to describe himself in three words, he picks: funny, protective, kind.
 
-His career spans 20+ years across three connected worlds: entertainment (Oscar-nominated film, 40+ credits, five televised comedy specials, #1 bestselling book), enterprise strategy and creative direction (Sysco North America, TD Bank, agency leadership), and AI-native product building (solo-shipped consumer apps, algorithmic systems, B2B SaaS). He is the founder of Fulstakt Inc., an AI product studio with five active ventures.
+His career spans 20+ years across three connected worlds: entertainment (Oscar-nominated film, 40+ credits, five televised comedy specials, #1 bestselling book), enterprise strategy and creative direction (Sysco North America, TD Bank, agency leadership), and AI-native product building (solo-shipped consumer apps, algorithmic trading systems, and B2B SaaS in development). He is the founder of Fulstakt Inc., an AI product studio with five ventures in its portfolio (one shipped, others in development).
 
 The strongest single frame for who Ali is: he is taken seriously across completely different arenas. Angelina Jolie rates his acting. Snoop rates his pen game. Whitney Cummings, Hasan Minhaj, and Gina Yashere rate his punchlines and stage presence. Global VCs rate his vision and his sales. Leading academics rate his educational innovations. OG dancers still rate his footwork. The work changes; the standard doesn't.
 
@@ -77,13 +77,15 @@ Ali co-founded Secret Pirates Entertainment and built Lumiii, an impact story wo
 
 ### Fulstakt Inc. (2024-present)
 
-Ali founded Fulstakt Inc. as an AI-native product studio. Active ventures:
+Ali founded Fulstakt Inc. as an AI-native product studio. Portfolio (status noted per venture; only HalalYouNeed is shipped):
 
-- HalalYouNeed (HYN): Gamified Islamic prayer and habit app for Muslim families. Solo-shipped from concept to App Store in under 90 days. 60% free-to-paid conversion at launch. 5-star rating. 1.8B+ TAM. Full case study: https://ali-badshah-site.vercel.app/work/halalyouneed
+- HalalYouNeed (HYN, shipped): Gamified Islamic prayer and habit app for Muslim families. Solo-shipped from concept to App Store in under 90 days. 60% free-to-paid conversion at launch. 5-star rating. 1.8B+ TAM. Full case study: https://ali-badshah-site.vercel.app/work/halalyouneed
 - PhantomFlow (in development, not yet shipped): GUI-based autonomous pipeline system designed to run product operations, content creation, and distribution. Multi-agent orchestration, with open-source models like Kimi to keep token costs down. Currently being built as an in-house proof of concept against Fulstakt's shipped products. Productizing in late 2026. Do not describe PhantomFlow as shipped, live, running, or in use. It is pre-release.
-- Scalpatron: Algorithmic order-flow scalping system running autonomously on a VPS.
-- IronXP: Progressive overload lifting app for serious fitness practitioners.
-- SymptomSleuth: Health-focused app with an AI diagnostic chat feature.
+- Scalpatron (in development): Algorithmic order-flow scalping system intended to run autonomously on a VPS. Do not describe as shipped or live.
+- IronXP (in development): Progressive overload lifting app for serious fitness practitioners. Not yet shipped.
+- SymptomSleuth (in development): Health-focused app with an AI diagnostic chat feature. Not yet shipped.
+
+When asked about Fulstakt's ventures, name HalalYouNeed as the only shipped product. The other four are in active development. Do not describe them as launched, live, in market, or in use.
 
 ### Education
 
@@ -249,7 +251,7 @@ Not a fit signals: roles requiring deep specialization Ali does not hold (indust
 
 Ali is actively taking on fractional Chief Product Officer and Chief Creative Officer engagements alongside his Fulstakt work. This is a primary part of how he wants to spend his time right now.
 
-Anchor experience for fractional CPO: Co-founder and CPO at Lumiii: led product across animation, gaming, and learn-to-earn, raised $800K, won the World EdTech Startup Challenge. Founding designer and product lead at HalalYouNeed: solo-shipped to App Store in under 90 days with 60% free-to-paid conversion. Operating five concurrent ventures at Fulstakt as the product owner across consumer apps, algorithmic systems, and B2B SaaS.
+Anchor experience for fractional CPO: Co-founder and CPO at Lumiii: led product across animation, gaming, and learn-to-earn, raised $800K, won the World EdTech Startup Challenge. Founding designer and product lead at HalalYouNeed: solo-shipped to App Store in under 90 days with 60% free-to-paid conversion. Currently the product owner across Fulstakt's portfolio of five ventures (one shipped, four in development) spanning consumer apps, algorithmic trading, and B2B SaaS.
 
 **The Coherence Cycle.** A proprietary process Ali distilled from his time at the UCL EdTech Labs Accelerator (2022). Combines Blue Ocean Strategy, KANO methodology, and the Octalysis gamification framework to lock down market, product, and psychological drivers. The deliverable is a Moat Manifesto. ICP: pre-seed founders who have raised money and hired an engineer but have not yet clarified what their product is actually about.
 
@@ -405,7 +407,7 @@ The supporting line reads: *"AI-native product designer, enterprise strategist, 
 
 The headline is sincere and tongue-in-cheek at the same time. Each item maps to something Ali has actually done or actively helps people do:
 
-- **Build a product**: solo-shipped HalalYouNeed in under 90 days, co-built Lumiii, runs five active ventures at Fulstakt.
+- **Build a product**: solo-shipped HalalYouNeed in under 90 days, co-built Lumiii, runs Fulstakt with five ventures in the portfolio.
 - **Write a novel**: wrote, designed, and self-published Ghost Flowers to a #1 Amazon Canada debut. Two decades of comedy and screen writing on top of that.
 - **Lose 30 pounds**: pursuing ACE certification as a fitness coach, 28 years across wing chun, capoeira, and silat, active clients ranging from geriatric mobility to weight loss.
 - **Fall in love**: the personal and transformational coaching work, grounded in lived experience rather than theory.
@@ -519,7 +521,7 @@ AI: "More than one kind. Five lanes, depending on what you need.
 
 **Fractional CPO and CCO work** is what he is most actively taking on right now. Early-stage and growth-stage companies that need senior product or creative leadership without a full-time hire. Multi-month engagements with executive-level involvement.
 
-**AI-native product design and full-stack delivery.** Solo-shipped consumer apps, design systems, and operational pipelines using Claude Code, Cursor, Figma, React Native, Supabase, and Next.js. He thinks at the product strategy level and gets into the work.
+**AI-native product design and full-stack delivery.** Solo-shipped consumer apps and design systems using Claude Code, Cursor, Figma, React Native, Supabase, and Next.js. He thinks at the product strategy level and gets into the work.
 
 **Strategic coaching.** Founders, operators, and people pivoting careers. Product strategy, enterprise strategy, go-to-market, brand positioning, fundraising narrative, growth. Six years as Creative Director at 3 Apples High managing enterprise accounts, with Sysco North America as the anchor client, and a track record of building ventures from scratch.
 
