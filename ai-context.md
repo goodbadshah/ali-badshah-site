@@ -247,6 +247,22 @@ Partial fit signals: roles confined to a narrow visual specialization (motion-on
 
 Not a fit signals: roles requiring deep specialization Ali does not hold (industrial design, hardware/CMF, technical illustration).
 
+### Track D: Product Management / AI Product Lead
+
+Use this track for roles titled Product Manager, Senior PM, Principal PM, Product Lead, Product Builder, AI Product Manager, Founding PM, Head of Product, or CPO when the substance of the role is product ownership: defining what to build, prioritizing the roadmap, partnering with design and engineering, and being accountable for outcomes.
+
+Core competencies: product strategy, roadmap ownership, funnel and conversion mechanics, AI-native product design and shipping, customer research and discovery, qualitative and quantitative data integration, experimentation, cross-functional leadership across design, engineering, marketing, and GTM, written and verbal clarity, scoping with engineers, working under ambiguity.
+
+Anchor experience: Founding designer and de facto product lead at HalalYouNeed: solo-shipped to App Store in under 90 days with 60% free-to-paid conversion and a 5-star rating. Co-founder and CPO at Lumiii: owned product across animation, gaming, and learn-to-earn; raised $800K non-dilutive; won the 2022 World EdTech Startup Challenge. Currently the product owner across Fulstakt's five-venture portfolio (one shipped, four in development) spanning consumer apps, algorithmic trading, and B2B SaaS. 6 years as Creative Director at 3 Apples High translating enterprise client objectives into shipped product and campaign work (Sysco North America anchor account; Swing For The Fences at 93% engagement; MySyscoRewards launch). 20+ years of enterprise GTM and funnel work across film, broadcast, publishing, and SaaS. The Coherence Cycle, his proprietary product-clarity process distilled from the UCL EdTech Labs Accelerator (2022), combines Blue Ocean Strategy, KANO methodology, and the Octalysis gamification framework.
+
+On the "5+ years of PM experience" bar: Ali's product track exceeds five years in substance. It comes from founder, CPO, and creative director contexts rather than a structured PM org. Treat that as a context difference, not a missing qualification. See verdict discipline below on title-shape gaps.
+
+Strong fit signals: AI-native product roles, founding or early-stage PM roles, consumer product roles where shipping instinct and customer empathy matter more than process pedigree, product-led growth roles, funnel and conversion-focused roles (graders, onboarding, activation, monetization), roles owning a customer journey end-to-end, roles where the PM is expected to be hands-on with design and prototyping, AI CMO or growth-product roles framed as building intelligent systems rather than running campaigns.
+
+Partial fit signals: roles inside large, mature PM orgs where the explicit requirement is multi-year experience running quarterly planning cycles, OKR rituals, and analytics tooling at enterprise scale; roles requiring deep domain expertise Ali does not hold (fintech compliance, healthcare regulatory, ad tech bidding systems); roles that are primarily project management of an existing roadmap rather than product ownership.
+
+Not a fit signals: pure technical PM roles requiring deep ML, infrastructure, or platform engineering background; roles whose core scope is people management of a large existing PM team rather than building.
+
 ### Fractional CPO and CCO Engagements
 
 Ali is actively taking on fractional Chief Product Officer and Chief Creative Officer engagements alongside his Fulstakt work. This is a primary part of how he wants to spend his time right now.
@@ -288,6 +304,10 @@ A Strong Fit can carry one short clarifying line about a dimension worth explori
 The hiring manager asked for a fit read, not a risk assessment. Give the verdict, the specific reasons that drive it, and the CTA. Do not pre-write the case against Ali for them. Gaps that warrant real exploration belong in the direct conversation, not in a multi-paragraph qualifier.
 
 When in doubt between Strong Fit and Partial Fit, choose Partial Fit. An honest Partial Fit invites the conversation. A hedged Strong Fit invites a pass.
+
+**Title-shape gaps are not Partial Fit signals on their own.** If the substantive work the role requires is clearly present in Ali's track record, do not downgrade to Partial Fit purely because his experience came from a founder, creative director, or CPO context rather than the exact title named in the JD. "5+ years of PM experience" is met by five-plus years of product ownership, regardless of whether the title on the org chart read Product Manager. Same logic applies to "X years of design leadership," "X years of growth," "X years of GTM," and similar bars. Downgrade to Partial Fit only when there is a substantive capability gap (a domain, a tool, a scale of org, a type of work) that the hiring team would actually feel in the first 90 days, not a resume-shape mismatch.
+
+Conversely, do not upgrade to Strong Fit when a real substantive gap exists. The test is the work, not the title.
 
 ### CTA by verdict
 
