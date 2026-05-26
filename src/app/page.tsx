@@ -1,4 +1,7 @@
-import HeroChat from "@/components/HeroChat";
+import HeroAnimated from "@/components/HeroAnimated";
+import MagneticCard from "@/components/MagneticCard";
+import ParallaxPhoto from "@/components/ParallaxPhoto";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
 
@@ -6,41 +9,27 @@ export default function Home() {
     <div className="min-h-screen">
       <section className="relative block-red px-6 pt-52 pb-16 md:pb-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full">
-            <div className="space-y-8">
-              <div className="flex flex-col gap-10">
-                <h2 className="heading-section text-white ali-custom-font">
-                  <span className="whitespace-nowrap">Build a product,</span> write a novel, lose 30 pounds, fall in love, and save the world in 90 days!*<span className="text-xs text-white/60 ml-1 whitespace-nowrap"> *results may vary</span>
-                </h2>
-                <p className="text-base md:text-lg text-white/80 font-medium leading-relaxed">
-                  AI-native product designer, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
-                </p>
-                <HeroChat />
-              </div>
-            </div>
-            <div className="flex flex-col gap-6 mt-8 lg:mt-0">
-              <img
-                src="/images/ali-badshah-photo-06.png"
-                alt="Ali Badshah"
-                className="w-full max-w-lg mx-auto rounded-3xl float-element"
-                style={{aspectRatio: '4/5', objectFit: 'cover'}}
-              />
-            </div>
-          </div>
+          <HeroAnimated
+            tagline={
+              <>
+                AI-native product designer, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
+              </>
+            }
+          />
         </div>
       </section>
 
       <section id="work" className="relative bg-white px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12 md:mb-16">
+          <Reveal className="mb-12 md:mb-16">
             <h2 className="heading-section text-gray-900 mb-4 ali-custom-font">WHAT I BUILD</h2>
             <p className="text-large text-gray-500 max-w-2xl">
               End-to-end product design, development, and go-to-market. From research to shipped.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          </Reveal>
+          <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
 
-            <a href="/work/halalyouneed" className="group relative aspect-square overflow-hidden rounded-2xl block">
+            <MagneticCard href="/work/halalyouneed" className="group relative aspect-square overflow-hidden rounded-2xl block">
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0d0303 0%, #4a0f0f 60%, #bb3535 100%)" }} />
               <img src="/images/work-halalyouneed.png" alt="HalalYouNeed" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
@@ -54,9 +43,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </a>
+            </MagneticCard>
 
-            <a href="/work/lumiii" className="group relative aspect-square overflow-hidden rounded-2xl block">
+            <MagneticCard href="/work/lumiii" className="group relative aspect-square overflow-hidden rounded-2xl block">
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0d0520 0%, #2d1b69 60%, #5b21b6 100%)" }} />
               <img src="/images/work-lumiii.png" alt="Lumiii" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
@@ -70,9 +59,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </a>
+            </MagneticCard>
 
-            <a href="/work/ghost-flowers" className="group relative aspect-square overflow-hidden rounded-2xl block">
+            <MagneticCard href="/work/ghost-flowers" className="group relative aspect-square overflow-hidden rounded-2xl block">
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0f0e0d 0%, #292524 60%, #57534e 100%)" }} />
               <img src="/images/work-ghostflowers.png" alt="Ghost Flowers" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
@@ -86,65 +75,65 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </a>
+            </MagneticCard>
 
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="relative block-red flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div className="space-y-3">
               <h2 className="heading-section text-white ali-custom-font">ENTERTAINMENT<br />EXCELLENCE</h2>
               <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Lead in Oscar-nominated "The Breadwinner", 40+ film and TV credits including Netflix, Fox, CBS shows, and 5 televised comedy specials.</p>
             </div>
             <div className="flex justify-center">
-              <img src="/images/ali-badshah-photo-03.png" alt="Ali Badshah" className="rounded-3xl w-full max-w-md float-element" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
+              <ParallaxPhoto src="/images/ali-badshah-photo-03.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="relative block-red-dark flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div className="flex justify-center order-2 lg:order-1">
-              <img src="/images/ali-badshah-photo-05.png" alt="Ali Badshah" className="rounded-3xl w-full max-w-md float-element" style={{aspectRatio: '4/5', objectFit: 'cover', animationDelay: '1s'}} />
+              <ParallaxPhoto src="/images/ali-badshah-photo-05.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
             </div>
             <div className="space-y-3 order-1 lg:order-2">
               <h2 className="heading-section text-white ali-custom-font">ENTREPRENEURIAL<br />SUCCESS</h2>
               <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Co-founder of award-winning ventures, with 15+ years of strategy, product development, and creative direction for major brands.</p>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="relative block-red-deeper flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div className="space-y-3">
               <h2 className="heading-section text-white ali-custom-font">MYSTICAL<br />WISDOM</h2>
               <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">#1 bestselling poetry book "Ghost Flowers", Sufi practitioner since 2011, offering profound insights into personal transformation and authentic living.</p>
             </div>
             <div className="flex justify-center">
-              <img src="/images/ali-badshah-photo-07.png" alt="Ali Badshah" className="rounded-3xl w-full max-w-md float-element" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
+              <ParallaxPhoto src="/images/ali-badshah-photo-07.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="relative block-red flex items-center justify-center px-6 py-8 md:py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="flex justify-center order-2 lg:order-1">
-              <img src="/images/ali-badshah-photo-02.png" alt="Ali Badshah" className="w-full max-w-sm rounded-3xl float-element shadow-2xl" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
+              <ParallaxPhoto src="/images/ali-badshah-photo-02.png" alt="Ali Badshah" wrapperClassName="w-full max-w-sm" className="w-full rounded-3xl shadow-2xl" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <h2 className="heading-section text-white ali-custom-font">LET'S<br />CONNECT</h2>
               <p className="text-large text-white/90">Whether you're hiring, collaborating, or just want to talk about building things that matter.</p>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
