@@ -1,4 +1,4 @@
-import HeroChat from "@/components/HeroChat";
+import HeroAnimated from "@/components/HeroAnimated";
 
 export default function Home() {
 
@@ -6,27 +6,13 @@ export default function Home() {
     <div className="min-h-screen">
       <section className="relative block-red px-6 pt-52 pb-16 md:pb-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full">
-            <div className="space-y-8">
-              <div className="flex flex-col gap-10">
-                <h2 className="heading-section text-white ali-custom-font">
-                  <span className="whitespace-nowrap">Build a product,</span> write a novel, lose 30 pounds, fall in love, and save the world in 90 days!*<span className="text-xs text-white/60 ml-1 whitespace-nowrap"> *results may vary</span>
-                </h2>
-                <p className="text-base md:text-lg text-white/80 font-medium leading-relaxed">
-                  AI-native product designer, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
-                </p>
-                <HeroChat />
-              </div>
-            </div>
-            <div className="flex flex-col gap-6 mt-8 lg:mt-0">
-              <img
-                src="/images/ali-badshah-photo-06.png"
-                alt="Ali Badshah"
-                className="w-full max-w-lg mx-auto rounded-3xl float-element"
-                style={{aspectRatio: '4/5', objectFit: 'cover'}}
-              />
-            </div>
-          </div>
+          <HeroAnimated
+            tagline={
+              <>
+                AI-native product designer, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
+              </>
+            }
+          />
         </div>
       </section>
 
