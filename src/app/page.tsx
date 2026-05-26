@@ -12,7 +12,7 @@ export default function Home() {
           <HeroAnimated
             tagline={
               <>
-                AI-native product designer, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
+                AI-native product architect, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
               </>
             }
           />
@@ -102,7 +102,7 @@ export default function Home() {
               <ParallaxPhoto src="/images/ali-badshah-photo-05.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
             </div>
             <div className="space-y-3 order-1 lg:order-2">
-              <h2 className="heading-section text-white ali-custom-font">ENTREPRENEURIAL<br />SUCCESS</h2>
+              <h2 className="heading-section text-white ali-custom-font">VENTURE<br />SUCCESS</h2>
               <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Co-founder of award-winning ventures, with 15+ years of strategy, product development, and creative direction for major brands.</p>
             </div>
           </Reveal>
