@@ -294,7 +294,7 @@ export default function HeroChat() {
               onKeyDown={handleKeyDown}
               disabled={isBusy && !isStreaming}
               rows={1}
-              placeholder={showFauxCaret ? '' : 'Ask how Ali is the right fit for you...'}
+              placeholder={showFauxCaret ? '' : 'Ask how Ali is right for you...'}
               className="block w-full bg-transparent text-white placeholder:text-white/50 text-base font-medium resize-none outline-none disabled:opacity-60 leading-6"
               style={{ maxHeight: TEXTAREA_MAX_HEIGHT }}
             />
@@ -307,7 +307,7 @@ export default function HeroChat() {
                   className="inline-block w-px h-5 bg-white/70 mr-1"
                   style={{ animation: 'cursor-blink 1.06s step-end infinite' }}
                 />
-                <span className="truncate">Ask how Ali is the right fit for you...</span>
+                <span className="truncate">Ask how Ali is right for you...</span>
               </div>
             )}
           </div>

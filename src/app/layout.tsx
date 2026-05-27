@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Ali Badshah: Storyteller & Builder",
-  description: "Portfolio & Booking Site for Ali Badshah: AI-native product designer, #1 bestselling author, and Oscar-nominated storyteller.",
+  description: "Portfolio & Booking Site for Ali Badshah: AI-native product architect, #1 bestselling author, and Oscar-nominated storyteller.",
 };
 
 export default function RootLayout({
