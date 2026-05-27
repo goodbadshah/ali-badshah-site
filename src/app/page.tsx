@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative block-red px-6 pt-52 pb-16 md:pb-20">
+      <section className="relative block-red hero-bg-drift px-6 pt-52 pb-16 md:pb-20">
         <div className="max-w-6xl mx-auto">
           <HeroAnimated
             tagline={
@@ -32,8 +32,8 @@ export default function Home() {
             <MagneticCard href="/work/halalyouneed" className="group relative aspect-square overflow-hidden rounded-2xl block">
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0d0303 0%, #4a0f0f 60%, #bb3535 100%)" }} />
               <img src="/images/work-halalyouneed.png" alt="HalalYouNeed" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
-              <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-8">
+              <div className="hidden md:block absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
+              <div className="hidden md:flex absolute inset-0 flex-col justify-center p-6 md:p-8">
                 <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   <h3 className="text-white text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight">HalalYouNeed</h3>
                   <p className="text-white/80 text-sm font-bold uppercase tracking-wide mt-2">Gamified Islamic Prayer App</p>
@@ -43,13 +43,18 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <Reveal amount={0.4} className="md:hidden absolute inset-x-0 bottom-0 px-5 pt-20 pb-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                <h3 className="text-white text-xl font-black uppercase tracking-tight leading-tight">HalalYouNeed</h3>
+                <p className="text-white/80 text-[11px] font-bold uppercase tracking-wide mt-1">Gamified Islamic Prayer App</p>
+                <p className="text-white/70 text-xs leading-snug mt-2">Solo-shipped to App Store. 60% free-to-paid at launch.</p>
+              </Reveal>
             </MagneticCard>
 
             <MagneticCard href="/work/lumiii" className="group relative aspect-square overflow-hidden rounded-2xl block">
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0d0520 0%, #2d1b69 60%, #5b21b6 100%)" }} />
               <img src="/images/work-lumiii.png" alt="Lumiii" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
-              <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-8">
+              <div className="hidden md:block absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
+              <div className="hidden md:flex absolute inset-0 flex-col justify-center p-6 md:p-8">
                 <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   <h3 className="text-white text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight">Lumiii</h3>
                   <p className="text-white/80 text-sm font-bold uppercase tracking-wide mt-2">Anime Brand & Gamified UNSDG Platform</p>
@@ -59,13 +64,18 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <Reveal amount={0.4} className="md:hidden absolute inset-x-0 bottom-0 px-5 pt-20 pb-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                <h3 className="text-white text-xl font-black uppercase tracking-tight leading-tight">Lumiii</h3>
+                <p className="text-white/80 text-[11px] font-bold uppercase tracking-wide mt-1">Anime Brand & Gamified UNSDG Platform</p>
+                <p className="text-white/70 text-xs leading-snug mt-2">Won 2022 World EdTech Startup Challenge. Raised $800K.</p>
+              </Reveal>
             </MagneticCard>
 
             <MagneticCard href="/work/ghost-flowers" className="group relative aspect-square overflow-hidden rounded-2xl block">
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0f0e0d 0%, #292524 60%, #57534e 100%)" }} />
               <img src="/images/work-ghostflowers.png" alt="Ghost Flowers" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
-              <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-8">
+              <div className="hidden md:block absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: "rgba(0, 0, 0, 0.85)" }} />
+              <div className="hidden md:flex absolute inset-0 flex-col justify-center p-6 md:p-8">
                 <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   <h3 className="text-white text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight">Ghost Flowers</h3>
                   <p className="text-white/80 text-sm font-bold uppercase tracking-wide mt-2">#1 Bestselling Book</p>
@@ -75,6 +85,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <Reveal amount={0.4} className="md:hidden absolute inset-x-0 bottom-0 px-5 pt-20 pb-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                <h3 className="text-white text-xl font-black uppercase tracking-tight leading-tight">Ghost Flowers</h3>
+                <p className="text-white/80 text-[11px] font-bold uppercase tracking-wide mt-1">#1 Bestselling Book</p>
+                <p className="text-white/70 text-xs leading-snug mt-2">Wrote, designed, and marketed it to a #1 debut.</p>
+              </Reveal>
             </MagneticCard>
 
           </Reveal>
