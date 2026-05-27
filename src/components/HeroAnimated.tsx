@@ -82,17 +82,19 @@ function AnimatedHeading({ reduced }: { reduced: boolean }) {
     if (reduced) return
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.12 })
-      groupRefs.current.forEach((groupEl) => {
+      groupRefs.current.forEach((groupEl, i) => {
         if (!groupEl) return
         const inners = groupEl.querySelectorAll<HTMLElement>('.word-inner')
         if (!inners.length) return
+        // Overlap next group by 0.18s for a shorter pause
+        const position = i === 0 ? undefined : `-=${0.18}`;
         tl.to(inners, {
           y: 0,
           opacity: 1,
           stagger: 0.035,
-          duration: 0.8,
+          duration: 0.7,
           ease: 'power3.out',
-        })
+        }, position)
       })
       if (asteriskRef.current) {
         gsap.set(asteriskRef.current, { opacity: 0, y: 12 })
