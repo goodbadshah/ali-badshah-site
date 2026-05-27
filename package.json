@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.92.0",
+    "gsap": "^3.15.0",
     "motion": "^12.40.0",
     "next": "16.2.1",
     "react": "19.2.4",

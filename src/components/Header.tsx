@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-20 px-6 bg-white shadow-lg flex items-center">
-      <div className="max-w-7xl mx-auto w-full flex items-center">
+      <div className="max-w-6xl mx-auto w-full flex items-center">
         <a href="/" className="flex items-center gap-3">
           <img
             src="/images/ali-badshah-logo.png"

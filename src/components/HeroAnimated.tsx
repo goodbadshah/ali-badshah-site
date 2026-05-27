@@ -8,7 +8,8 @@ import {
   useTransform,
   type Variants,
 } from 'motion/react'
-import { Fragment, useEffect, useRef, type ReactNode } from 'react'
+import { Fragment, useEffect, useLayoutEffect, useRef, type ReactNode } from 'react'
+import gsap from 'gsap'
 import HeroChat from './HeroChat'
 
 const containerVariants: Variants = {
@@ -21,13 +22,7 @@ const containerVariants: Variants = {
   },
 }
 
-const wordSpring = { type: 'spring' as const, damping: 18, stiffness: 220, mass: 0.9 }
 const blockSpring = { type: 'spring' as const, damping: 22, stiffness: 180, mass: 0.9 }
-
-const wordVariants: Variants = {
-  hidden: { opacity: 0, y: '0.4em' },
-  show: { opacity: 1, y: 0, transition: wordSpring },
-}
 
 const blockVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -43,11 +38,74 @@ const photoVariants: Variants = {
   },
 }
 
-const NOWRAP_PHRASE = 'Build a product,'
-const REST_PHRASE =
-  'write a novel, lose 30 pounds, fall in love, and save the world in 90 days!*'
+type HeadingGroup = { words: string[]; nowrap?: boolean }
+
+const HEADING_GROUPS: HeadingGroup[] = [
+  { words: ['Build', 'a', 'product,'], nowrap: true },
+  { words: ['write', 'a', 'novel,'] },
+  { words: ['lose', '30', 'pounds,'] },
+  { words: ['fall', 'in', 'love,'] },
+  { words: ['and', 'save', 'the', 'world', 'in', '90', 'days!*'] },
+]
+
+function MaskedWord({ word, trailingSpace }: { word: string; trailingSpace: boolean }) {
+  return (
+    <span
+      style={{
+        display: 'inline-block',
+        overflow: 'hidden',
+        verticalAlign: 'bottom',
+        lineHeight: 'inherit',
+      }}
+    >
+      <span
+        className="word-inner"
+        style={{
+          display: 'inline-block',
+          transform: 'translateY(60px)',
+          opacity: 0,
+          willChange: 'transform, opacity',
+        }}
+      >
+        {word}
+        {trailingSpace ? '\u00A0' : ''}
+      </span>
+    </span>
+  )
+}
 
 function AnimatedHeading({ reduced }: { reduced: boolean }) {
+  const groupRefs = useRef<(HTMLSpanElement | null)[]>([])
+  const asteriskRef = useRef<HTMLSpanElement | null>(null)
+
+  useLayoutEffect(() => {
+    if (reduced) return
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ delay: 0.12 })
+      groupRefs.current.forEach((groupEl) => {
+        if (!groupEl) return
+        const inners = groupEl.querySelectorAll<HTMLElement>('.word-inner')
+        if (!inners.length) return
+        tl.to(inners, {
+          y: 0,
+          opacity: 1,
+          stagger: 0.035,
+          duration: 0.8,
+          ease: 'power3.out',
+        })
+      })
+      if (asteriskRef.current) {
+        gsap.set(asteriskRef.current, { opacity: 0, y: 12 })
+        tl.to(
+          asteriskRef.current,
+          { opacity: 1, y: 0, duration: 0.32, ease: 'power2.out' },
+          '-=0.15',
+        )
+      }
+    })
+    return () => ctx.revert()
+  }, [reduced])
+
   if (reduced) {
     return (
       <h2 className="heading-section text-white ali-custom-font">
@@ -57,41 +115,38 @@ function AnimatedHeading({ reduced }: { reduced: boolean }) {
     )
   }
 
-  const nowrapWords = NOWRAP_PHRASE.split(' ')
-  const restWords = REST_PHRASE.split(' ')
-
   return (
-    <motion.h2
-      className="heading-section text-white ali-custom-font"
-      variants={containerVariants}
-      initial="hidden"
-      animate="show"
-    >
-      <span className="whitespace-nowrap">
-        {nowrapWords.map((word, i) => (
-          <Fragment key={`a-${i}`}>
-            <motion.span variants={wordVariants} className="inline-block">
-              {word}
-            </motion.span>
-            {i < nowrapWords.length - 1 ? '\u00A0' : ''}
-          </Fragment>
-        ))}
-      </span>{' '}
-      {restWords.map((word, i) => (
-        <Fragment key={`b-${i}`}>
-          <motion.span variants={wordVariants} className="inline-block">
-            {word}
-          </motion.span>
-          {i < restWords.length - 1 ? ' ' : ''}
-        </Fragment>
-      ))}
-      <motion.span
-        variants={wordVariants}
-        className="block text-xs text-white/60 mt-2"
-      >
+    <h2 className="heading-section text-white ali-custom-font">
+      {HEADING_GROUPS.map((group, gi) => {
+        const isLastGroup = gi === HEADING_GROUPS.length - 1
+        const content = group.words.map((word, wi) => {
+          const isLastWordInGroup = wi === group.words.length - 1
+          // Trailing space after every word except the final word of the final group
+          const trailingSpace = !(isLastGroup && isLastWordInGroup)
+          return (
+            <MaskedWord
+              key={`g${gi}-w${wi}`}
+              word={word}
+              trailingSpace={trailingSpace}
+            />
+          )
+        })
+        const groupNode = (
+          <span
+            ref={(el) => {
+              groupRefs.current[gi] = el
+            }}
+            style={group.nowrap ? { whiteSpace: 'nowrap' } : undefined}
+          >
+            {content}
+          </span>
+        )
+        return <Fragment key={`g${gi}`}>{groupNode}</Fragment>
+      })}
+      <span ref={asteriskRef} className="block text-xs text-white/60 mt-2">
         *results may vary
-      </motion.span>
-    </motion.h2>
+      </span>
+    </h2>
   )
 }
 

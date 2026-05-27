@@ -103,7 +103,6 @@ body {
 /* Tier 3: slow gradient drift behind hero.
    Two large radial gradients (warm highlight + deep shadow) breathe and drift. */
 .hero-bg-drift { overflow: hidden; }
-.hero-bg-drift::before,
 .hero-bg-drift::after {
   content: "";
   position: absolute;
@@ -111,16 +110,6 @@ body {
   border-radius: 50%;
   filter: blur(80px);
   will-change: transform, opacity;
-}
-.hero-bg-drift::before {
-  top: -30%;
-  left: -25%;
-  width: 60%;
-  height: 80%;
-  background: radial-gradient(circle, rgba(255, 190, 160, 0.28), transparent 65%);
-  mix-blend-mode: screen;
-  animation: hero-drift-a 20s ease-in-out infinite;
-  z-index: 0;
 }
 .hero-bg-drift::after {
   bottom: -30%;
@@ -134,7 +123,6 @@ body {
 }
 
 @media (max-width: 767px) {
-  .hero-bg-drift::before { display: none; }
   .hero-bg-drift::after {
     bottom: -40%;
     right: -40%;
@@ -147,17 +135,12 @@ body {
   z-index: 1;
 }
 
-@keyframes hero-drift-a {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(8%, 6%, 0) scale(1.15); }
-}
 @keyframes hero-drift-b {
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
   50% { transform: translate3d(-6%, -8%, 0) scale(1.2); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-bg-drift::before,
   .hero-bg-drift::after { animation: none; }
 }
 

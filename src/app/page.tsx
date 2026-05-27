@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative block-red hero-bg-drift px-6 pt-52 pb-16 md:pb-20">
+      <section className="relative block-red hero-bg-drift px-6 pt-56 pb-16 md:pb-24">
         <div className="max-w-6xl mx-auto">
           <HeroAnimated
             tagline={
@@ -27,7 +27,7 @@ export default function Home() {
               End-to-end product design, development, and go-to-market. From research to shipped.
             </p>
           </Reveal>
-          <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
             <MagneticCard href="/work/halalyouneed" className="group relative aspect-square overflow-hidden rounded-2xl block">
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0d0303 0%, #4a0f0f 60%, #bb3535 100%)" }} />
@@ -99,7 +99,7 @@ export default function Home() {
       <section className="relative block-red flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto w-full">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            <div className="space-y-3">
+            <div className="space-y-5">
               <h2 className="heading-section text-white ali-custom-font">ENTERTAINMENT<br />EXCELLENCE</h2>
               <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Lead in Oscar-nominated "The Breadwinner", 40+ film and TV credits including Netflix, Fox, CBS shows, and 5 televised comedy specials.</p>
             </div>
@@ -116,7 +116,7 @@ export default function Home() {
             <div className="flex justify-center order-2 lg:order-1">
               <ParallaxPhoto src="/images/ali-badshah-photo-05.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
             </div>
-            <div className="space-y-3 order-1 lg:order-2">
+            <div className="space-y-5 order-1 lg:order-2">
               <h2 className="heading-section text-white ali-custom-font">VENTURE<br />SUCCESS</h2>
               <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Co-founder of award-winning ventures, with 15+ years of strategy, product development, and creative direction for major brands.</p>
             </div>
@@ -127,7 +127,7 @@ export default function Home() {
       <section className="relative block-red-deeper flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto w-full">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            <div className="space-y-3">
+            <div className="space-y-5">
               <h2 className="heading-section text-white ali-custom-font">MYSTICAL<br />WISDOM</h2>
               <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">#1 bestselling poetry book "Ghost Flowers", Sufi practitioner since 2011, offering profound insights into personal transformation and authentic living.</p>
             </div>
@@ -138,7 +138,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative block-red flex items-center justify-center px-6 py-8 md:py-20">
+      <section className="relative block-red flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="flex justify-center order-2 lg:order-1">
