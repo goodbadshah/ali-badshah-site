@@ -113,24 +113,34 @@ body {
   will-change: transform, opacity;
 }
 .hero-bg-drift::before {
-  top: -20%;
-  left: -10%;
-  width: 70%;
-  height: 90%;
-  background: radial-gradient(circle, rgba(255, 190, 160, 0.55), transparent 65%);
+  top: -30%;
+  left: -25%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(255, 190, 160, 0.28), transparent 65%);
   mix-blend-mode: screen;
   animation: hero-drift-a 20s ease-in-out infinite;
   z-index: 0;
 }
 .hero-bg-drift::after {
-  bottom: -25%;
-  right: -15%;
-  width: 80%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(60, 0, 0, 0.6), transparent 65%);
+  bottom: -30%;
+  right: -25%;
+  width: 70%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(60, 0, 0, 0.55), transparent 65%);
   mix-blend-mode: multiply;
   animation: hero-drift-b 26s ease-in-out infinite;
   z-index: 0;
+}
+
+@media (max-width: 767px) {
+  .hero-bg-drift::before { display: none; }
+  .hero-bg-drift::after {
+    bottom: -40%;
+    right: -40%;
+    width: 90%;
+    height: 70%;
+  }
 }
 .hero-bg-drift > * {
   position: relative;
