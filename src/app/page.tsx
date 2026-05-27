@@ -2,6 +2,7 @@ import HeroAnimated from "@/components/HeroAnimated";
 import MagneticCard from "@/components/MagneticCard";
 import ParallaxPhoto from "@/components/ParallaxPhoto";
 import Reveal from "@/components/Reveal";
+import WhoIWorkWithCompare from "@/components/WhoIWorkWithCompare";
 
 export default function Home() {
 
@@ -16,6 +17,25 @@ export default function Home() {
               </>
             }
           />
+        </div>
+      </section>
+
+      <section id="who-i-work-with" className="relative bg-white px-6 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto">
+          <Reveal className="mb-12 md:mb-16">
+            <h2 className="heading-section text-gray-900 mb-8 ali-custom-font">WHO I WORK WITH</h2>
+            <div className="max-w-3xl space-y-6">
+              <p className="text-large text-gray-700">
+                I work with pre-seed and seed founders who have raised some capital, maybe hired an engineer or marketer, but don't have dedicated product leadership yet. </p> 
+                <p className="text-large text-gray-700">
+                The critical decisions about what to build, for whom, and why are being made without a product operator in the room. That's where things go wrong.
+              </p>
+              <p className="text-large text-gray-700">
+                If you have early signal and need to figure out whether you are building the right thing, I can help you get clear fast.
+              </p>
+            </div>
+          </Reveal>
+          <WhoIWorkWithCompare />
         </div>
       </section>
 
