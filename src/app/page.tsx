@@ -1,8 +1,9 @@
 import HeroAnimated from "@/components/HeroAnimated";
 import MagneticCard from "@/components/MagneticCard";
 import ParallaxPhoto from "@/components/ParallaxPhoto";
+import PromiseTricolon from "@/components/PromiseTricolon";
 import Reveal from "@/components/Reveal";
-import WhoIWorkWithCompare from "@/components/WhoIWorkWithCompare";
+import ThePractice from "@/components/ThePractice";
 
 export default function Home() {
 
@@ -20,29 +21,78 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="who-i-work-with" className="relative bg-white px-6 py-16 md:py-24">
+      <section id="the-promise" className="relative bg-white px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
           <Reveal className="mb-12 md:mb-16">
-            <h2 className="heading-section text-gray-900 mb-8 ali-custom-font">WHO I WORK WITH</h2>
-            <div className="max-w-3xl space-y-6">
-              <p className="text-large text-gray-700">
-                I work with pre-seed and seed founders who have raised some capital, maybe hired an engineer or marketer, but don't have dedicated product leadership yet. </p> 
-                <p className="text-large text-gray-700">
-                The critical decisions about what to build, for whom, and why are being made without a product operator in the room. That's where things go wrong.
+            <h2 className="heading-section text-gray-900 mb-8 ali-custom-font">THE PROMISE</h2>
+          </Reveal>
+
+          <Reveal className="mb-16 md:mb-24">
+            <p className="text-large text-gray-900 max-w-4xl">
+              I help companies build validated and defensible products using my proprietary method, the Moat Manifesto.
+            </p>
+          </Reveal>
+
+          <Reveal className="mb-16 md:mb-24">
+            <PromiseTricolon />
+          </Reveal>
+
+          <Reveal className="mb-12">
+            <h3 className="text-sm font-black uppercase tracking-widest text-gray-400 mb-6">WHO THIS IS FOR</h3>
+            <div className="space-y-6 max-w-3xl">
+              <p
+                className="text-large text-gray-900"
+                style={{ borderLeft: '2px solid var(--red-hero)', paddingLeft: '16px' }}
+              >
+                Pre-seed or seed founders who have raised, maybe hired an engineer or a marketer, but do not have dedicated product leadership yet.
               </p>
-              <p className="text-large text-gray-700">
-                If you have early signal and need to figure out whether you are building the right thing, I can help you get clear fast.
+              <p
+                className="text-large text-gray-900"
+                style={{ borderLeft: '2px solid var(--red-hero)', paddingLeft: '16px' }}
+              >
+                Producers with original or optioned story-world IP that needs to be developed into something defensible and evergreen.
               </p>
             </div>
           </Reveal>
-          <WhoIWorkWithCompare />
+
+          <Reveal className="mb-16">
+            <h3 className="text-sm font-black uppercase tracking-widest text-gray-400 mb-6">WHAT YOU GET</h3>
+            <h4 className="heading-section text-gray-900 ali-custom-font mb-4">Taste.</h4>
+            <p className="text-large text-gray-700 max-w-3xl">
+              The judgment to tell you what is wrong with your idea before you build it. The methodology to pressure-test what is right. The discipline to keep you on the line until the thing is real.
+            </p>
+          </Reveal>
+
+          <Reveal className="flex justify-center mt-16">
+            <span
+              aria-hidden="true"
+              className="chevron-pulse text-3xl leading-none select-none"
+              style={{ color: 'var(--red-hero)' }}
+            >
+              &#8595;
+            </span>
+          </Reveal>
         </div>
       </section>
 
-      <section id="work" className="relative bg-white px-6 py-16 md:py-24">
+      <section id="the-practice" className="relative bg-white px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
           <Reveal className="mb-12 md:mb-16">
-            <h2 className="heading-section text-gray-900 mb-4 ali-custom-font">WHAT I BUILD</h2>
+            <h2 className="heading-section text-gray-900 mb-4 ali-custom-font">THE PRACTICE</h2>
+            <p className="text-large text-gray-500 max-w-2xl">
+              Three depths. One methodology underneath.
+            </p>
+          </Reveal>
+          <Reveal>
+            <ThePractice />
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="case-studies" className="relative bg-white px-6 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto">
+          <Reveal className="mb-12 md:mb-16">
+            <h2 className="heading-section text-gray-900 mb-4 ali-custom-font">CASE STUDIES</h2>
             <p className="text-large text-gray-500 max-w-2xl">
               End-to-end product design, development, and go-to-market. From research to shipped.
             </p>
