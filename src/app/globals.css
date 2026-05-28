@@ -5,9 +5,19 @@
   50% { opacity: 0; }
 }
 
+@keyframes chevron-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.chevron-pulse {
+  animation: chevron-pulse 2s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .float-element { animation: none; }
   [style*="cursor-blink"] { animation: none !important; }
+  .chevron-pulse { animation: none; }
 }
 
 @font-face {

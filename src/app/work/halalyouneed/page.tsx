@@ -6,7 +6,7 @@ export default function HalalYouNeedCaseStudy() {
 
       <div className="pt-20" style={{ background: "linear-gradient(135deg, #0d0303 0%, #300f4a 60%, #6d35bb 100%)" }}>
         <div className="max-w-6xl mx-auto px-6 pt-12 pb-16 md:pt-20 md:pb-24">
-          <a href="/#work" className="inline-flex items-center gap-2 text-white/50 text-xs font-bold uppercase tracking-widest hover:text-white transition-colors mb-10">
+          <a href="/#case-studies" className="inline-flex items-center gap-2 text-white/50 text-xs font-bold uppercase tracking-widest hover:text-white transition-colors mb-10">
             ← Back to Work
           </a>
 
@@ -206,7 +206,7 @@ export default function HalalYouNeedCaseStudy() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 ali-custom-font">Want to Build Something?</h2>
           <p className="text-lg text-white/50 mb-10">I design, build, and ship products end-to-end. Let's talk.</p>
-          <a href="/#work" className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white text-sm font-bold uppercase tracking-wide rounded-full hover:bg-white/10 transition-colors">
+          <a href="/#case-studies" className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white text-sm font-bold uppercase tracking-wide rounded-full hover:bg-white/10 transition-colors">
             ← All Work
           </a>
         </div>
