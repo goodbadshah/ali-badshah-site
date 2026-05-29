@@ -1,188 +1,214 @@
 'use client'
 
-import { motion, useReducedMotion, type Variants } from 'motion/react'
-import { useEffect, useState, type ReactNode } from 'react'
+import { motion, useReducedMotion } from 'motion/react'
+import { useState, type ReactNode } from 'react'
 import WaitlistForm from './WaitlistForm'
-
-const SPRING = { type: 'spring' as const, damping: 20, stiffness: 180, mass: 0.6 }
+import { useMagnetic } from '@/lib/useMagnetic'
 
 const CALENDLY_URL = 'https://calendly.com/your-handle/fortress-forge-fit-call'
 
 type CardId = 'moat' | 'fortress' | 'garrison'
 
-function useIsDesktop() {
-  const [isDesktop, setIsDesktop] = useState(false)
-  useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1024px)')
-    const update = () => setIsDesktop(mq.matches)
-    update()
-    mq.addEventListener('change', update)
-    return () => mq.removeEventListener('change', update)
-  }, [])
-  return isDesktop
-}
-
-function PrimaryOfferTag({ hovered }: { hovered: boolean }) {
-  const tagVariants: Variants = {
-    rest: { scale: 1 },
-    hover: { scale: 1.05, transition: SPRING },
-  }
-  return (
-    <motion.span
-      variants={tagVariants}
-      animate={hovered ? 'hover' : 'rest'}
-      className="absolute top-4 right-4 uppercase font-bold"
-      style={{
-        fontSize: '10px',
-        letterSpacing: '0.05em',
-        padding: '4px 8px',
-        border: '1px solid var(--red-hero)',
-        color: 'var(--red-hero)',
-        background: 'transparent',
-        borderRadius: '4px',
-      }}
-    >
-      PRIMARY OFFER
-    </motion.span>
-  )
-}
-
-function Card({
-  id,
-  hero,
-  active,
-  anyActive,
-  isDesktop,
-  reduced,
-  onHover,
-  onLeave,
-  children,
-}: {
+type CardProps = {
   id: string
-  hero?: boolean
-  active: boolean
-  anyActive: boolean
-  isDesktop: boolean
-  reduced: boolean
-  onHover: () => void
+  primary?: boolean
+  numeral: string
+  hovered: boolean
+  onEnter: () => void
   onLeave: () => void
   children: ReactNode
-}) {
-  const animateHover = isDesktop && !reduced
-  const liftY = hero ? -8 : -6
+}
 
-  const animateProps = animateHover
-    ? {
-        y: active ? liftY : 0,
-        opacity: anyActive && !active ? 0.85 : 1,
-      }
-    : { y: 0, opacity: 1 }
+function PracticeCard({ id, primary, numeral, hovered, onEnter, onLeave, children }: CardProps) {
+  const magnet = useMagnetic({
+    maxOffset: primary ? 14 : 10,
+    tiltDegrees: 5,
+    innerParallaxRange: 6,
+  })
 
-  const baseShadow = hero
-    ? '0 18px 40px -12px rgba(187, 53, 53, 0.25), 0 6px 16px -6px rgba(0, 0, 0, 0.08)'
-    : '0 6px 18px -8px rgba(0, 0, 0, 0.12)'
+  const bg = primary ? 'var(--ink-elev)' : 'var(--bone)'
+  const color = primary ? 'var(--bone)' : 'var(--ink)'
+
+  const baseShadow = primary
+    ? '0 28px 70px -28px rgba(187, 53, 53, 0.45), 0 12px 30px -12px rgba(0, 0, 0, 0.55)'
+    : '0 18px 50px -24px rgba(20, 17, 15, 0.45)'
+
+  const glowShadow = primary
+    ? '0 40px 90px -28px rgba(187, 53, 53, 0.85), 0 20px 50px -16px rgba(187, 53, 53, 0.4), 0 12px 30px -12px rgba(0, 0, 0, 0.55)'
+    : '0 28px 65px -24px rgba(20, 17, 15, 0.55)'
+
+  if (magnet.reduced) {
+    return (
+      <div
+        id={id}
+        className="relative flex flex-col h-full p-7 md:p-8"
+        style={{
+          background: bg,
+          color,
+          borderRadius: '28px',
+          boxShadow: baseShadow,
+          overflow: 'hidden',
+        }}
+      >
+        {primary ? (
+          <div
+            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              height: '2px',
+              background: 'var(--red-hero)',
+            }}
+          />
+        ) : null}
+        <span
+          aria-hidden="true"
+          className="ali-custom-font select-none pointer-events-none"
+          style={{
+            position: 'absolute',
+            bottom: '-1.5rem',
+            right: '-0.5rem',
+            fontSize: 'clamp(10rem, 18vw, 16rem)',
+            lineHeight: 1,
+            color: primary ? 'rgba(244, 238, 230, 0.06)' : 'rgba(20, 17, 15, 0.05)',
+          }}
+        >
+          {numeral}
+        </span>
+        <div className="relative z-10 flex flex-col h-full">{children}</div>
+      </div>
+    )
+  }
 
   return (
     <motion.div
+      ref={magnet.ref as React.RefObject<HTMLDivElement>}
       id={id}
       role="group"
-      onPointerEnter={animateHover ? onHover : undefined}
-      onPointerLeave={animateHover ? onLeave : undefined}
-      animate={animateProps}
-      transition={SPRING}
-      className="relative flex flex-col h-full rounded-2xl p-6 md:p-8 border border-gray-200"
+      onPointerEnter={onEnter}
+      onPointerLeave={() => {
+        magnet.onPointerLeave()
+        onLeave()
+      }}
+      onPointerMove={magnet.onPointerMove}
+      animate={{ boxShadow: hovered ? glowShadow : baseShadow }}
+      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      className="relative flex flex-col h-full p-7 md:p-8"
       style={{
-        background: hero ? 'rgba(212, 104, 104, 0.08)' : '#ffffff',
-        boxShadow: baseShadow,
+        background: bg,
+        color,
+        borderRadius: '28px',
+        overflow: 'hidden',
+        x: magnet.x,
+        y: magnet.y,
+        rotateX: magnet.rotateX,
+        rotateY: magnet.rotateY,
+        transformStyle: 'preserve-3d',
+        willChange: 'transform, box-shadow',
       }}
     >
-      {hero ? <PrimaryOfferTag hovered={active} /> : null}
-      {children}
+      {primary ? (
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: '2px',
+            background: 'var(--red-hero)',
+            transform: 'translateZ(40px)',
+          }}
+        />
+      ) : null}
+
+      <motion.span
+        aria-hidden="true"
+        className="ali-custom-font select-none pointer-events-none"
+        style={{
+          position: 'absolute',
+          bottom: '-1.5rem',
+          right: '-0.5rem',
+          fontSize: 'clamp(10rem, 18vw, 16rem)',
+          lineHeight: 1,
+          color: primary ? 'rgba(244, 238, 230, 0.06)' : 'rgba(20, 17, 15, 0.05)',
+          x: magnet.parallaxX,
+          y: magnet.parallaxY,
+          willChange: 'transform',
+        }}
+      >
+        {numeral}
+      </motion.span>
+
+      <motion.div
+        className="relative flex flex-col h-full"
+        style={{
+          x: magnet.parallaxX,
+          y: magnet.parallaxY,
+          transform: 'translateZ(40px)',
+          transformStyle: 'preserve-3d',
+        }}
+      >
+        {children}
+      </motion.div>
     </motion.div>
   )
 }
 
 export default function ThePractice() {
   const reduced = useReducedMotion() ?? false
-  const isDesktop = useIsDesktop()
   const [active, setActive] = useState<CardId | null>(null)
 
-  const anyActive = active !== null
-
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-      <Card
+    <div
+      className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6 items-stretch"
+      style={{ perspective: reduced ? undefined : 1200 }}
+    >
+      <PracticeCard
         id="card-moat-manifesto"
-        active={active === 'moat'}
-        anyActive={anyActive}
-        isDesktop={isDesktop}
-        reduced={reduced}
-        onHover={() => setActive('moat')}
+        numeral="01"
+        hovered={active === 'moat'}
+        onEnter={() => setActive('moat')}
         onLeave={() => setActive(null)}
       >
-        <h3 className="text-2xl md:text-3xl text-gray-900 ali-custom-font mb-2">
-          MOAT MANIFESTO
-        </h3>
-        <p className="italic text-gray-500 mb-5">
-          A strategic instrument for founders and storytellers.
+        <p className="eyebrow mb-6" style={{ color: 'var(--red-hero)' }}>
+          One-time · In development
         </p>
-        <div className="space-y-4 text-gray-700 text-base leading-relaxed flex-1">
-          <p>
-            A guided five-stage process built on three phases: Terrain Analysis, Feature
-            Architecture, and Motivation Design. You answer the questions. The tool builds
-            your Moat Manifesto: a complete strategic document that maps your uncontested
-            territory, designs the features or franchise elements that will create real
-            delight, and architects the engagement that turns first-time users or
-            first-time audiences into lifetime customers.
-          </p>
-          <p>
-            One-time payment. Multiple runs across as many ideas, products, or IPs as you
-            want.
-          </p>
-          <p className="text-gray-500 text-sm">
-            In development. Founders and producers on the waitlist get early access and
-            founding-member pricing.
-          </p>
+        <h3 className="heading-display-sm mb-4">Moat Manifesto</h3>
+        <p className="body-base mb-3" style={{ opacity: 0.85 }}>
+          A guided strategic tool that maps your uncontested territory, designs delight, and
+          architects engagement.
+        </p>
+        <p className="body-base flex-1" style={{ opacity: 0.6 }}>
+          For founders and producers building from idea to defensible product.
+        </p>
+        <div className="mt-7">
+          <WaitlistForm variant="light" />
         </div>
-        <div className="mt-6">
-          <WaitlistForm />
-        </div>
-      </Card>
+      </PracticeCard>
 
-      <Card
+      <PracticeCard
         id="card-fortress-forge"
-        hero
-        active={active === 'fortress'}
-        anyActive={anyActive}
-        isDesktop={isDesktop}
-        reduced={reduced}
-        onHover={() => setActive('fortress')}
+        primary
+        numeral="02"
+        hovered={active === 'fortress'}
+        onEnter={() => setActive('fortress')}
         onLeave={() => setActive(null)}
       >
-        <h3 className="text-2xl md:text-3xl text-gray-900 ali-custom-font mb-2 mt-6">
-          FORTRESS FORGE
-        </h3>
-        <p className="italic text-gray-500 mb-5">
-          Two weeks. We forge your moat together.
+        <p className="eyebrow mb-6" style={{ color: 'var(--red-hero)' }}>
+          Two-week intensive
         </p>
-        <div className="space-y-4 text-gray-700 text-base leading-relaxed flex-1">
-          <p>
-            A fixed two-week intensive. We work through the Moat Manifesto methodology
-            against your real product, your real market, and your real constraints. For
-            founders, that means your codebase, your users, your roadmap. For producers,
-            that means your IP, your audience, and the franchise architecture you are
-            trying to build.
-          </p>
-          <p>
-            You leave with a Terrain Map, a Feature Architecture, a Motivation Design, and
-            a 90-day execution plan. You also leave with clarity on what to kill.
-          </p>
-          <p className="text-gray-500 text-sm">
-            For founders and producers with early signal and no product lead. Limited
-            engagements per quarter.
-          </p>
-        </div>
-        <div className="mt-6">
+        <h3 className="heading-display-sm mb-4">Fortress Forge</h3>
+        <p className="body-base mb-3" style={{ opacity: 0.92 }}>
+          We forge your moat together against your real product, your real market, and your
+          real constraints.
+        </p>
+        <p className="body-base flex-1" style={{ opacity: 0.65 }}>
+          For founders and producers with early signal and no product lead.
+        </p>
+        <div className="mt-7">
           {/* TODO: replace CALENDLY_URL placeholder with the real Calendly link. */}
           <a
             href={CALENDLY_URL}
@@ -190,51 +216,57 @@ export default function ThePractice() {
             rel="noopener noreferrer"
             className="btn-red w-full"
           >
-            BOOK A FIT CALL
+            Book a Fit Call
           </a>
         </div>
-      </Card>
+      </PracticeCard>
 
-      <Card
+      <PracticeCard
         id="card-garrison"
-        active={active === 'garrison'}
-        anyActive={anyActive}
-        isDesktop={isDesktop}
-        reduced={reduced}
-        onHover={() => setActive('garrison')}
+        numeral="03"
+        hovered={active === 'garrison'}
+        onEnter={() => setActive('garrison')}
         onLeave={() => setActive(null)}
       >
-        <h3 className="text-2xl md:text-3xl text-gray-900 ali-custom-font mb-2">
-          GARRISON
-        </h3>
-        <p className="italic text-gray-500 mb-5">
-          Embedded product or IP leadership, ongoing.
+        <p className="eyebrow mb-6" style={{ color: 'var(--red-hero)' }}>
+          Ongoing leadership
         </p>
-        <div className="space-y-4 text-gray-700 text-base leading-relaxed flex-1">
-          <p>
-            Part-time product leadership for AI-native startups not yet ready to hire a
-            full-time CPO. Or part-time creative and franchise leadership for production
-            companies developing IP without an embedded showrunner-strategist. Inside your
-            team. Inside your decisions. Inside the work.
-          </p>
-          <p>
-            Same judgment a full-time executive brings. Without the equity package or the
-            eighteen-month commitment.
-          </p>
-          <p className="text-gray-500 text-sm">
-            Available to qualified founders and producers. Those who have completed a
-            Fortress Forge get priority placement.
-          </p>
-        </div>
-        <div className="mt-6">
+        <h3 className="heading-display-sm mb-4">Garrison</h3>
+        <p className="body-base mb-3" style={{ opacity: 0.85 }}>
+          Embedded product or IP leadership. Inside your team, inside your decisions,
+          inside the work.
+        </p>
+        <p className="body-base flex-1" style={{ opacity: 0.6 }}>
+          For founders not yet ready to hire a full-time CPO.
+        </p>
+        <div className="mt-7">
           <a
             href="mailto:ali@fulstakt.com?subject=Garrison%20Inquiry"
-            className="btn-red w-full"
+            className="w-full inline-flex items-center justify-center"
+            style={{
+              padding: '0.95rem 1.5rem',
+              borderRadius: '9999px',
+              border: '1px solid var(--ink)',
+              color: 'var(--ink)',
+              fontWeight: 700,
+              fontSize: '0.9375rem',
+              letterSpacing: '0.04em',
+              textTransform: 'uppercase',
+              transition: 'background 200ms ease, color 200ms ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'var(--ink)'
+              e.currentTarget.style.color = 'var(--bone)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'transparent'
+              e.currentTarget.style.color = 'var(--ink)'
+            }}
           >
-            START A CONVERSATION
+            Start a Conversation
           </a>
         </div>
-      </Card>
+      </PracticeCard>
     </div>
   )
 }

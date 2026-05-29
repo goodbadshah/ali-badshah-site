@@ -4,6 +4,9 @@ import ParallaxPhoto from "@/components/ParallaxPhoto";
 import PromiseTricolon from "@/components/PromiseTricolon";
 import Reveal from "@/components/Reveal";
 import ThePractice from "@/components/ThePractice";
+import MaskedHeading from "@/components/motion/MaskedHeading";
+import EyebrowUnderline from "@/components/motion/EyebrowUnderline";
+import DividerDraw from "@/components/motion/DividerDraw";
 
 export default function Home() {
 
@@ -14,89 +17,114 @@ export default function Home() {
           <HeroAnimated
             tagline={
               <>
-                AI-native product architect, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
+                Product and design architect, enterprise strategist, #1 bestselling author, Oscar-nominated storyteller, and honest-to-goodness mystic. <strong>I help you design, build, and ship your dreams!</strong>
               </>
             }
           />
         </div>
       </section>
 
-      <section id="the-promise" className="relative bg-white px-6 py-16 md:py-24">
+      <section id="the-promise" className="section-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
-          <Reveal className="mb-12 md:mb-16">
-            <h2 className="heading-section text-gray-900 mb-8 ali-custom-font">THE PROMISE</h2>
-          </Reveal>
+          <div className="mb-10 md:mb-12">
+            <EyebrowUnderline className="mb-6">The Promise</EyebrowUnderline>
+            <MaskedHeading as="h2" className="heading-display max-w-5xl">
+              I help companies build validated and defensible products using my proprietary
+              method, the Moat Manifesto.
+            </MaskedHeading>
+          </div>
 
-          <Reveal className="mb-16 md:mb-24">
-            <p className="text-large text-gray-900 max-w-4xl">
-              I help companies build validated and defensible products using my proprietary method, the Moat Manifesto.
-            </p>
-          </Reveal>
-
-          <Reveal className="mb-16 md:mb-24">
+          <Reveal className="mt-20 md:mt-28 mb-20 md:mb-28">
             <PromiseTricolon />
           </Reveal>
 
-          <Reveal className="mb-12">
-            <h3 className="text-sm font-black uppercase tracking-widest text-gray-400 mb-6">WHO THIS IS FOR</h3>
-            <div className="space-y-6 max-w-3xl">
-              <p
-                className="text-large text-gray-900"
-                style={{ borderLeft: '2px solid var(--red-hero)', paddingLeft: '16px' }}
-              >
-                Pre-seed or seed founders who have raised, maybe hired an engineer or a marketer, but do not have dedicated product leadership yet.
-              </p>
-              <p
-                className="text-large text-gray-900"
-                style={{ borderLeft: '2px solid var(--red-hero)', paddingLeft: '16px' }}
-              >
-                Producers with original or optioned story-world IP that needs to be developed into something defensible and evergreen.
-              </p>
-            </div>
-          </Reveal>
+          <DividerDraw className="mb-20 md:mb-28" />
 
-          <Reveal className="mb-16">
-            <h3 className="text-sm font-black uppercase tracking-widest text-gray-400 mb-6">WHAT YOU GET</h3>
-            <h4 className="heading-section text-gray-900 ali-custom-font mb-4">Taste.</h4>
-            <p className="text-large text-gray-700 max-w-3xl">
-              The judgment to tell you what is wrong with your idea before you build it. The methodology to pressure-test what is right. The discipline to keep you on the line until the thing is real.
-            </p>
-          </Reveal>
+          <div className="mb-20 md:mb-28">
+            <EyebrowUnderline className="mb-8">Who this is for</EyebrowUnderline>
+            <Reveal>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 max-w-5xl">
+                <div>
+                  <span
+                    className="eyebrow inline-block mb-5 px-3 py-1.5"
+                    style={{
+                      color: 'var(--red-hero)',
+                      border: '1px solid var(--red-hero)',
+                      borderRadius: '9999px',
+                    }}
+                  >
+                    Founders
+                  </span>
+                  <MaskedHeading as="h4" className="heading-display-sm mb-4">
+                    Pre-seed and seed founders without dedicated product leadership.
+                  </MaskedHeading>
+                  <p className="body-base" style={{ opacity: 0.7 }}>
+                    You've raised, maybe hired an engineer or a marketer, but no one owns
+                    the product.
+                  </p>
+                </div>
+                <div>
+                  <span
+                    className="eyebrow inline-block mb-5 px-3 py-1.5"
+                    style={{
+                      color: 'var(--red-hero)',
+                      border: '1px solid var(--red-hero)',
+                      borderRadius: '9999px',
+                    }}
+                  >
+                    Producers
+                  </span>
+                  <MaskedHeading as="h4" className="heading-display-sm mb-4">
+                    Holders of original or optioned story-world IP.
+                  </MaskedHeading>
+                  <p className="body-base" style={{ opacity: 0.7 }}>
+                    You've got a great IP, but need defensible, evergreen franchise architecture.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
 
-          <Reveal className="flex justify-center mt-16">
-            <span
-              aria-hidden="true"
-              className="chevron-pulse text-3xl leading-none select-none"
-              style={{ color: 'var(--red-hero)' }}
-            >
-              &#8595;
-            </span>
-          </Reveal>
+          <DividerDraw className="mb-20 md:mb-28" />
+
+          <div>
+            <EyebrowUnderline className="mb-6">What you get</EyebrowUnderline>
+            <MaskedHeading as="h3" className="heading-display mb-6" lines={["Taste & Clarity."]} />
+            <Reveal>
+              <p className="body-base-lg max-w-3xl" style={{ opacity: 0.75 }}>
+                The judgment to tell you what is wrong with your idea before you build it. The
+                methodology to pressure-test what is right. The discipline to keep you on the
+                line until the thing is real.
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
 
-      <section id="the-practice" className="relative bg-white px-6 py-16 md:py-24">
+      <section id="the-practice" className="section-ink fade-from-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
-          <Reveal className="mb-12 md:mb-16">
-            <h2 className="heading-section text-gray-900 mb-4 ali-custom-font">THE PRACTICE</h2>
-            <p className="text-large text-gray-500 max-w-2xl">
-              Three depths. One methodology underneath.
-            </p>
-          </Reveal>
+          <div className="mb-14 md:mb-20">
+            <EyebrowUnderline className="mb-6">The Practice</EyebrowUnderline>
+            <MaskedHeading
+              as="h2"
+              className="heading-display max-w-3xl"
+              lines={["Three depths.", "One method."]}
+            />
+          </div>
           <Reveal>
             <ThePractice />
           </Reveal>
         </div>
       </section>
 
-      <section id="case-studies" className="relative bg-white px-6 py-16 md:py-24">
+      <section id="case-studies" className="section-bone fade-from-ink relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
-          <Reveal className="mb-12 md:mb-16">
-            <h2 className="heading-section text-gray-900 mb-4 ali-custom-font">CASE STUDIES</h2>
-            <p className="text-large text-gray-500 max-w-2xl">
-              End-to-end product design, development, and go-to-market. From research to shipped.
-            </p>
-          </Reveal>
+          <div className="mb-14 md:mb-20">
+            <EyebrowUnderline className="mb-6">Case Studies</EyebrowUnderline>
+            <MaskedHeading as="h2" className="heading-display max-w-3xl">
+              End-to-end product design, development, and go-to-market.
+            </MaskedHeading>
+          </div>
           <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
             <MagneticCard href="/work/halalyouneed" className="group relative aspect-square overflow-hidden rounded-2xl block">

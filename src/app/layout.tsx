@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Ticker from "@/components/Ticker";
 import Header from "@/components/Header";
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 
 export const metadata: Metadata = {
   title: "Ali Badshah: Storyteller & Builder",
@@ -19,6 +20,7 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/COOPBL.woff" as="font" type="font/woff" crossOrigin="anonymous" />
       </head>
       <body className="min-h-full flex flex-col">
+        <SmoothScrollProvider />
         <Header />
         <Ticker />
         {children}

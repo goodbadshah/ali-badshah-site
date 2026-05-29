@@ -5,19 +5,9 @@
   50% { opacity: 0; }
 }
 
-@keyframes chevron-pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 1; }
-}
-
-.chevron-pulse {
-  animation: chevron-pulse 2s ease-in-out infinite;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .float-element { animation: none; }
   [style*="cursor-blink"] { animation: none !important; }
-  .chevron-pulse { animation: none; }
 }
 
 @font-face {
@@ -29,18 +19,87 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('/fonts/PPEditorialNew-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('/fonts/PPEditorialNew-Ultralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('/fonts/PPEditorialNew-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --red-hero: #bb3535;
   --red-light: #d46868;
   --red-dark: #a72f2f;
   --red-deeper: #7f2424;
+  --bone: #f4eee6;
+  --bone-soft: #ebe3d6;
+  --ink: #14110f;
+  --ink-soft: #1f1c19;
+  --ink-elev: #2a2622;
 }
 
 body {
-  background: #fff;
-  color: #0a0a0a;
+  background: var(--bone);
+  color: var(--ink);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   scrollbar-gutter: stable;
+}
+
+.section-bone { background: var(--bone); color: var(--ink); }
+.section-ink { background: var(--ink); color: var(--bone); }
+
+.fade-from-bone,
+.fade-from-ink {
+  position: relative;
+}
+
+.fade-from-bone::before,
+.fade-from-ink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fade-from-bone::before {
+  background: linear-gradient(to bottom, var(--bone), var(--ink));
+}
+
+.fade-from-ink::before {
+  background: linear-gradient(to bottom, var(--ink), var(--bone));
+}
+
+.fade-from-bone > *,
+.fade-from-ink > * {
+  position: relative;
+  z-index: 1;
+}
+
+.tone-divider {
+  height: 1px;
+  background: var(--red-hero);
+  opacity: 0.35;
 }
 
 .heading-section {
@@ -74,6 +133,78 @@ body {
 
 @media (min-width: 768px) {
   .text-large { font-size: 1.5rem; }
+}
+
+.eyebrow {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.eyebrow-display {
+  font-family: 'ali-coopbl', system-ui, sans-serif;
+  font-weight: normal;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .eyebrow-display { font-size: 1rem; }
+}
+
+.heading-display {
+  font-family: 'PP Editorial New', 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 2.75rem;
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 768px) {
+  .heading-display { font-size: 4rem; }
+}
+
+@media (min-width: 1024px) {
+  .heading-display { font-size: 5rem; }
+}
+
+.heading-display-sm {
+  font-family: 'PP Editorial New', 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+@media (min-width: 768px) {
+  .heading-display-sm { font-size: 1.875rem; }
+}
+
+.body-base {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .body-base { font-size: 1.125rem; }
+}
+
+.body-base-lg {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .body-base-lg { font-size: 1.5rem; }
 }
 
 .text-red {
