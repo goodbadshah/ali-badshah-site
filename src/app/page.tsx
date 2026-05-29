@@ -197,9 +197,14 @@ export default function Home() {
       <section className="relative block-red flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto w-full">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            <div className="space-y-5">
-              <h2 className="heading-section text-white ali-custom-font">ENTERTAINMENT<br />EXCELLENCE</h2>
-              <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Lead in Oscar-nominated "The Breadwinner", 40+ film and TV credits including Netflix, Fox, CBS shows, and 5 televised comedy specials.</p>
+            <div className="space-y-6">
+              <EyebrowUnderline color="#ffffff">Track Record</EyebrowUnderline>
+              <MaskedHeading
+                as="h2"
+                className="heading-display text-white"
+                lines={["Entertainment", "Excellence."]}
+              />
+              <p className="body-base-lg text-white/85">Lead in Oscar-nominated "The Breadwinner", 40+ film and TV credits including Netflix, Fox, CBS shows, and 5 televised comedy specials.</p>
             </div>
             <div className="flex justify-center">
               <ParallaxPhoto src="/images/ali-badshah-photo-03.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
@@ -214,9 +219,13 @@ export default function Home() {
             <div className="flex justify-center order-2 lg:order-1">
               <ParallaxPhoto src="/images/ali-badshah-photo-05.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
             </div>
-            <div className="space-y-5 order-1 lg:order-2">
-              <h2 className="heading-section text-white ali-custom-font">VENTURE<br />SUCCESS</h2>
-              <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Co-founder of award-winning ventures, with 15+ years of strategy, product development, and creative direction for major brands.</p>
+            <div className="space-y-6 order-1 lg:order-2">
+              <MaskedHeading
+                as="h2"
+                className="heading-display text-white"
+                lines={["Venture", "Success."]}
+              />
+              <p className="body-base-lg text-white/85">Co-founder of award-winning ventures, with 15+ years of strategy, product development, and creative direction for major brands.</p>
             </div>
           </Reveal>
         </div>
@@ -225,9 +234,13 @@ export default function Home() {
       <section className="relative block-red-deeper flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto w-full">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            <div className="space-y-5">
-              <h2 className="heading-section text-white ali-custom-font">MYSTICAL<br />WISDOM</h2>
-              <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">#1 bestselling poetry book "Ghost Flowers", Sufi practitioner since 2011, offering profound insights into personal transformation and authentic living.</p>
+            <div className="space-y-6">
+              <MaskedHeading
+                as="h2"
+                className="heading-display text-white"
+                lines={["Mystical", "Wisdom."]}
+              />
+              <p className="body-base-lg text-white/85">#1 bestselling poetry book "Ghost Flowers", Sufi practitioner since 2011, offering profound insights into personal transformation and authentic living.</p>
             </div>
             <div className="flex justify-center">
               <ParallaxPhoto src="/images/ali-badshah-photo-07.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
@@ -243,8 +256,12 @@ export default function Home() {
               <ParallaxPhoto src="/images/ali-badshah-photo-02.png" alt="Ali Badshah" wrapperClassName="w-full max-w-sm" className="w-full rounded-3xl shadow-2xl" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
-              <h2 className="heading-section text-white ali-custom-font">LET'S<br />CONNECT</h2>
-              <p className="text-large text-white/90">Whether you're hiring, collaborating, or just want to talk about building things that matter.</p>
+              <MaskedHeading
+                as="h2"
+                className="heading-display text-white"
+                lines={["Let's", "Connect."]}
+              />
+              <p className="body-base-lg text-white/85">Whether you're hiring, collaborating, or just want to talk about building things that matter.</p>
             </div>
           </Reveal>
         </div>
