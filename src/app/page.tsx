@@ -1,12 +1,18 @@
+import BusinessLogos from "@/components/BusinessLogos";
+import Coaching from "@/components/Coaching";
 import HeroAnimated from "@/components/HeroAnimated";
 import MagneticCard from "@/components/MagneticCard";
 import ParallaxPhoto from "@/components/ParallaxPhoto";
 import PromiseTricolon from "@/components/PromiseTricolon";
 import Reveal from "@/components/Reveal";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import ThePractice from "@/components/ThePractice";
 import MaskedHeading from "@/components/motion/MaskedHeading";
 import EyebrowUnderline from "@/components/motion/EyebrowUnderline";
 import DividerDraw from "@/components/motion/DividerDraw";
+
+// TODO: Replace CONSULT_URL with the real top-of-funnel Calendly link.
+const CONSULT_URL = 'https://calendly.com/your-handle/15-min-consult';
 
 export default function Home() {
 
@@ -101,6 +107,21 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="proof" className="section-bone relative px-6 py-20 md:py-32">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14 md:mb-20">
+            <EyebrowUnderline className="mb-6">Testimonials</EyebrowUnderline>
+          </div>
+          <Reveal className="mb-20 md:mb-28">
+            <TestimonialsCarousel />
+          </Reveal>
+          <DividerDraw className="mb-20 md:mb-28" />
+          <Reveal>
+            <BusinessLogos />
+          </Reveal>
+        </div>
+      </section>
+
       <section id="the-practice" className="section-ink fade-from-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-14 md:mb-20">
@@ -117,7 +138,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="case-studies" className="section-bone fade-from-ink relative px-6 py-20 md:py-32">
+      <section id="coaching" className="section-bone fade-from-ink relative px-6 py-20 md:py-32">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14 md:mb-20">
+            <EyebrowUnderline className="mb-6">Coaching</EyebrowUnderline>
+          </div>
+          <Reveal>
+            <Coaching />
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="case-studies" className="section-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-14 md:mb-20">
             <EyebrowUnderline className="mb-6">Case Studies</EyebrowUnderline>
@@ -156,7 +188,7 @@ export default function Home() {
                 <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   <h3 className="text-white text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight">Lumiii</h3>
                   <p className="text-white/80 text-sm font-bold uppercase tracking-wide mt-2">Anime Brand & Gamified UNSDG Platform</p>
-                  <p className="text-white/70 text-sm leading-relaxed mt-3">Won 2022 World EdTech Startup Challenge. Evidence-based research via UCL. Raised $800K.</p>
+                  <p className="text-white/70 text-sm leading-relaxed mt-3">Won 2022 World EdTech Startup Challenge. UCL-backed research. $800K raised + $1.2M in soft commits.</p>
                   <div className="flex items-center gap-2 text-white text-sm font-bold uppercase tracking-wide mt-5 transition-transform duration-200">
                     View Case Study <span className="group-hover:translate-x-1 inline-block transition-transform duration-200">→</span>
                   </div>
@@ -165,7 +197,7 @@ export default function Home() {
               <Reveal amount={0.4} className="md:hidden absolute inset-x-0 bottom-0 px-5 pt-20 pb-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
                 <h3 className="text-white text-xl font-black uppercase tracking-tight leading-tight">Lumiii</h3>
                 <p className="text-white/80 text-[11px] font-bold uppercase tracking-wide mt-1">Anime Brand & Gamified UNSDG Platform</p>
-                <p className="text-white/70 text-xs leading-snug mt-2">Won 2022 World EdTech Startup Challenge. Raised $800K.</p>
+                <p className="text-white/70 text-xs leading-snug mt-2">Won 2022 World EdTech Startup Challenge. $800K + $1.2M soft commits.</p>
               </Reveal>
             </MagneticCard>
 
@@ -249,7 +281,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative block-red flex items-center justify-center px-6 py-16 md:py-24">
+      <section id="connect" className="relative block-red flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="flex justify-center order-2 lg:order-1">
@@ -262,6 +294,23 @@ export default function Home() {
                 lines={["Let's", "Connect."]}
               />
               <p className="body-base-lg text-white/85">Whether you're hiring, collaborating, or just want to talk about building things that matter.</p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
+                <a
+                  href={CONSULT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold uppercase tracking-widest text-[var(--ink)] bg-[var(--bone)] hover:bg-white transition-colors"
+                >
+                  Book a 15-min consult
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a
+                  href="mailto:ali@fulstakt.com"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold uppercase tracking-widest text-white border border-white/40 hover:bg-white/10 hover:border-white/70 transition-colors"
+                >
+                  Email Ali
+                </a>
+              </div>
             </div>
           </Reveal>
         </div>
