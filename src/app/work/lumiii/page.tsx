@@ -59,7 +59,7 @@ export default function LumiiiCaseStudy() {
             Lumiii is an impact story world built around the UN Sustainable Development Goals, brought to life through video games, activity kits, and a comic universe designed for kids aged 6 to 18. The goal was to make the SDGs feel like an adventure, not a lesson.
           </p>
           <p className="text-lg md:text-xl text-neutral-500 leading-relaxed mt-6">
-            I worked across brand strategy, IP development, go-to-market, and the Web3 launch. We won the World EdTech Startup Challenge, dropped NFTs on Solana, launched LumiiiToken on Polygon, and built a community of over 15,000 people from scratch.
+            I worked across brand strategy, IP development, go-to-market, and the Web3 launch. We won the World EdTech Startup Challenge, raised $800K non-dilutive plus $1.2M in soft commits, dropped NFTs on Solana, launched LumiiiToken on Polygon, and built a community of over 15,000 people from scratch.
           </p>
         </div>
       </section>
@@ -196,7 +196,7 @@ export default function LumiiiCaseStudy() {
             </div>
           </div>
           <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl">
-            Winning the World EdTech Startup Challenge, sponsored by Santander Universities, put Lumiii on the map globally. The NFT drop on Solana and LumiiiToken launch on Polygon gave the community real stakes in the universe. 15,000 people showed up organically, without paid acquisition, because the IP was worth showing up for.
+            Winning the World EdTech Startup Challenge, sponsored by Santander Universities, put Lumiii on the map globally. We raised $800K non-dilutive and built $1.2M in soft commits before the 2022 crypto downturn closed the window. The NFT drop on Solana and LumiiiToken launch on Polygon gave the community real stakes in the universe. 15,000 people showed up organically, without paid acquisition, because the IP was worth showing up for.
           </p>
         </div>
       </section>

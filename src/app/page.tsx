@@ -1,12 +1,17 @@
+import BusinessLogos from "@/components/BusinessLogos";
 import HeroAnimated from "@/components/HeroAnimated";
 import MagneticCard from "@/components/MagneticCard";
 import ParallaxPhoto from "@/components/ParallaxPhoto";
+import PracticeGate from "@/components/PracticeGate";
 import PromiseTricolon from "@/components/PromiseTricolon";
 import Reveal from "@/components/Reveal";
-import ThePractice from "@/components/ThePractice";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import MaskedHeading from "@/components/motion/MaskedHeading";
 import EyebrowUnderline from "@/components/motion/EyebrowUnderline";
 import DividerDraw from "@/components/motion/DividerDraw";
+
+// TODO: Replace CONSULT_URL with the real top-of-funnel Calendly link.
+const CONSULT_URL = 'https://calendly.com/your-handle/15-min-consult';
 
 export default function Home() {
 
@@ -101,31 +106,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="the-practice" className="section-ink fade-from-bone relative px-6 py-20 md:py-32">
+      <section id="the-proof" className="section-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-14 md:mb-20">
-            <EyebrowUnderline className="mb-6">The Practice</EyebrowUnderline>
-            <MaskedHeading
-              as="h2"
-              className="heading-display max-w-3xl"
-              lines={["Three depths.", "One method."]}
-            />
-          </div>
-          <Reveal>
-            <ThePractice />
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="case-studies" className="section-bone fade-from-ink relative px-6 py-20 md:py-32">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-14 md:mb-20">
-            <EyebrowUnderline className="mb-6">Case Studies</EyebrowUnderline>
+            <EyebrowUnderline className="mb-6">The Proof</EyebrowUnderline>
             <MaskedHeading as="h2" className="heading-display max-w-3xl">
               End-to-end product design, development, and go-to-market.
             </MaskedHeading>
           </div>
-          <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-20 md:mb-28">
 
             <MagneticCard href="/work/halalyouneed" className="group relative aspect-square overflow-hidden rounded-2xl block">
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0d0303 0%, #4a0f0f 60%, #bb3535 100%)" }} />
@@ -156,7 +145,7 @@ export default function Home() {
                 <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   <h3 className="text-white text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight">Lumiii</h3>
                   <p className="text-white/80 text-sm font-bold uppercase tracking-wide mt-2">Anime Brand & Gamified UNSDG Platform</p>
-                  <p className="text-white/70 text-sm leading-relaxed mt-3">Won 2022 World EdTech Startup Challenge. Evidence-based research via UCL. Raised $800K.</p>
+                  <p className="text-white/70 text-sm leading-relaxed mt-3">Won 2022 World EdTech Startup Challenge. UCL-backed research. $800K raised + $1.2M in soft commits.</p>
                   <div className="flex items-center gap-2 text-white text-sm font-bold uppercase tracking-wide mt-5 transition-transform duration-200">
                     View Case Study <span className="group-hover:translate-x-1 inline-block transition-transform duration-200">→</span>
                   </div>
@@ -165,7 +154,7 @@ export default function Home() {
               <Reveal amount={0.4} className="md:hidden absolute inset-x-0 bottom-0 px-5 pt-20 pb-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
                 <h3 className="text-white text-xl font-black uppercase tracking-tight leading-tight">Lumiii</h3>
                 <p className="text-white/80 text-[11px] font-bold uppercase tracking-wide mt-1">Anime Brand & Gamified UNSDG Platform</p>
-                <p className="text-white/70 text-xs leading-snug mt-2">Won 2022 World EdTech Startup Challenge. Raised $800K.</p>
+                <p className="text-white/70 text-xs leading-snug mt-2">Won 2022 World EdTech Startup Challenge. $800K + $1.2M soft commits.</p>
               </Reveal>
             </MagneticCard>
 
@@ -191,15 +180,48 @@ export default function Home() {
             </MagneticCard>
 
           </Reveal>
+
+          <DividerDraw className="mb-20 md:mb-28" />
+
+          <Reveal>
+            <BusinessLogos />
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="the-praise" className="section-bone relative px-6 py-20 md:py-32">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14 md:mb-20">
+            <EyebrowUnderline className="mb-6">The Praise</EyebrowUnderline>
+          </div>
+          <Reveal>
+            <TestimonialsCarousel />
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="the-practice" className="section-ink fade-from-bone relative px-6 py-20 md:py-32">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14 md:mb-20">
+            <EyebrowUnderline className="mb-6">The Practice</EyebrowUnderline>
+          </div>
+          <Reveal>
+            <PracticeGate />
+          </Reveal>
         </div>
       </section>
 
       <section className="relative block-red flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto w-full">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            <div className="space-y-5">
-              <h2 className="heading-section text-white ali-custom-font">ENTERTAINMENT<br />EXCELLENCE</h2>
-              <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Lead in Oscar-nominated "The Breadwinner", 40+ film and TV credits including Netflix, Fox, CBS shows, and 5 televised comedy specials.</p>
+            <div className="space-y-6">
+              <EyebrowUnderline color="#ffffff">The Prerequisites</EyebrowUnderline>
+              <MaskedHeading
+                as="h2"
+                className="heading-display text-white"
+                lines={["Entertainment", "Excellence."]}
+              />
+              <p className="body-base-lg text-white/85">Lead in Oscar-nominated "The Breadwinner", 40+ film and TV credits including Netflix, Fox, CBS shows, and 5 televised comedy specials.</p>
             </div>
             <div className="flex justify-center">
               <ParallaxPhoto src="/images/ali-badshah-photo-03.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
@@ -214,9 +236,13 @@ export default function Home() {
             <div className="flex justify-center order-2 lg:order-1">
               <ParallaxPhoto src="/images/ali-badshah-photo-05.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
             </div>
-            <div className="space-y-5 order-1 lg:order-2">
-              <h2 className="heading-section text-white ali-custom-font">VENTURE<br />SUCCESS</h2>
-              <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">Co-founder of award-winning ventures, with 15+ years of strategy, product development, and creative direction for major brands.</p>
+            <div className="space-y-6 order-1 lg:order-2">
+              <MaskedHeading
+                as="h2"
+                className="heading-display text-white"
+                lines={["Venture", "Success."]}
+              />
+              <p className="body-base-lg text-white/85">Co-founder of award-winning ventures, with 15+ years of strategy, product development, and creative direction for major brands.</p>
             </div>
           </Reveal>
         </div>
@@ -225,9 +251,13 @@ export default function Home() {
       <section className="relative block-red-deeper flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto w-full">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            <div className="space-y-5">
-              <h2 className="heading-section text-white ali-custom-font">MYSTICAL<br />WISDOM</h2>
-              <p className="text-xl md:text-2xl leading-relaxed font-medium text-white/90">#1 bestselling poetry book "Ghost Flowers", Sufi practitioner since 2011, offering profound insights into personal transformation and authentic living.</p>
+            <div className="space-y-6">
+              <MaskedHeading
+                as="h2"
+                className="heading-display text-white"
+                lines={["Mystical", "Wisdom."]}
+              />
+              <p className="body-base-lg text-white/85">#1 bestselling poetry book "Ghost Flowers", Sufi practitioner since 2011, offering profound insights into personal transformation and authentic living.</p>
             </div>
             <div className="flex justify-center">
               <ParallaxPhoto src="/images/ali-badshah-photo-07.png" alt="Ali Badshah" wrapperClassName="w-full max-w-md" className="rounded-3xl w-full" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
@@ -236,15 +266,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative block-red flex items-center justify-center px-6 py-16 md:py-24">
+      <section id="connect" className="relative block-red flex items-center justify-center px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="flex justify-center order-2 lg:order-1">
               <ParallaxPhoto src="/images/ali-badshah-photo-02.png" alt="Ali Badshah" wrapperClassName="w-full max-w-sm" className="w-full rounded-3xl shadow-2xl" style={{aspectRatio: '4/5', objectFit: 'cover'}} />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
-              <h2 className="heading-section text-white ali-custom-font">LET'S<br />CONNECT</h2>
-              <p className="text-large text-white/90">Whether you're hiring, collaborating, or just want to talk about building things that matter.</p>
+              <MaskedHeading
+                as="h2"
+                className="heading-display text-white"
+                lines={["Let's", "Connect."]}
+              />
+              <p className="body-base-lg text-white/85">Whether you're hiring, collaborating, or just want to talk about building things that matter.</p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
+                <a
+                  href={CONSULT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold uppercase tracking-widest text-[var(--ink)] bg-[var(--bone)] hover:bg-white transition-colors"
+                >
+                  Book a 15-min consult
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a
+                  href="mailto:ali@fulstakt.com"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold uppercase tracking-widest text-white border border-white/40 hover:bg-white/10 hover:border-white/70 transition-colors"
+                >
+                  Email Ali
+                </a>
+              </div>
             </div>
           </Reveal>
         </div>

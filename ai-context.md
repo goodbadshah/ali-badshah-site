@@ -73,7 +73,7 @@ Ghost Flowers: A Poetic Remedy From The Rebel and Mystic Heart was written throu
 
 ### Lumiii / Secret Pirates Entertainment (2021-2024)
 
-Ali co-founded Secret Pirates Entertainment and built Lumiii, an impact story world for school-aged kids built around the UN Sustainable Development Goals, brought to life through games, activity kits, and a comic universe. He led brand strategy, product design, and go-to-market across animation, gaming, and Web3. Lumiii won the 2022 World EdTech Startup Challenge, raised $800K in non-dilutive capital, launched NFTs on Solana, released LumiiiToken on Polygon, and built a community of 15,000+ organically. An institutional VC firm in South Africa purchased $100K USD of LumiiiToken with no equity dilution, opening the pipeline that grew to $1.2M USD in soft commits before market conditions changed. The runway ran out before product-market fit was achieved. The lesson: global validation and PMF are different things. Full case study: https://ali-badshah-site.vercel.app/work/lumiii
+Ali co-founded Secret Pirates Entertainment and built Lumiii, an impact story world for school-aged kids built around the UN Sustainable Development Goals, brought to life through games, activity kits, and a comic universe. He led brand strategy, product design, and go-to-market across animation, gaming, and Web3. Lumiii won the 2022 World EdTech Startup Challenge, raised $800K non-dilutive, launched NFTs on Solana, released LumiiiToken on Polygon, and built a community of 15,000+ organically. An institutional VC firm in South Africa anchored the pipeline with a $100K LumiiiToken purchase (no equity dilution), which grew to $1.2M in soft commits before the 2022 crypto downturn. The runway ran out before product-market fit was achieved. The lesson: global validation and PMF are different things. Full case study: https://ali-badshah-site.vercel.app/work/lumiii
 
 ### Fulstakt Inc. (2024-present)
 
@@ -224,7 +224,7 @@ Credentials: Claude Certified Architect Foundations (CCAF) in progress.
 
 AI-native developer. Prompt-driven development with shipping discipline, not vibe coding. Architects systems, not just screens.
 
-Anchor experience: Solo-shipped HalalYouNeed from concept to App Store in under 90 days. Co-built Lumiii brand, product, and go-to-market. Six years of creative direction and app development at 3 Apples High.
+Anchor experience: Solo-shipped HalalYouNeed from concept to App Store in under 90 days. Co-built Lumiii brand, product, and go-to-market: raised $800K non-dilutive plus $1.2M in soft commits before the 2022 crypto downturn. Six years of creative direction and app development at 3 Apples High.
 
 Anchor results: 60% free-to-paid conversion at HYN launch. 5-star App Store rating. #1 Amazon Canada bestseller designed end-to-end in InDesign.
 
@@ -240,7 +240,7 @@ Core competencies: brand strategy, art direction, visual design systems, typogra
 
 Anchor experience: 6 years as Creative Director at 3 Apples High leading visual and creative output across enterprise B2B accounts, with Sysco North America as the anchor client. Co-founder and CPO at Lumiii, where he led brand strategy and product design for an animated tween IP across animation, gaming, and learn-to-earn. Self-authored, self-designed, and self-published Ghost Flowers, a #1 Amazon Canada bestseller built end-to-end in Adobe InDesign. Founding designer at HalalYouNeed, where he owned the full visual system in Figma (star economy, daily reset mechanics, mini-games, progressive sunrise alarm) through to shipped iOS and Android.
 
-Anchor results: Swing For The Fences at 93% engagement across Sysco North America. MySyscoRewards launch. World EdTech Startup Challenge win for Lumiii. #1 Amazon Canada bestseller designed solo. 60% free-to-paid conversion at HYN launch with a 5-star App Store rating.
+Anchor results: Swing For The Fences at 93% engagement across Sysco North America. MySyscoRewards launch. World EdTech Startup Challenge win for Lumiii, $800K non-dilutive plus $1.2M in soft commits. #1 Amazon Canada bestseller designed solo. 60% free-to-paid conversion at HYN launch with a 5-star App Store rating.
 
 Design philosophy: Bold Minimalism with Soul. Near-black and warm-white palettes, bold accents, high contrast, generous space, rhythm, warmth without ornamentation. Restraint is not coldness.
 
@@ -256,7 +256,7 @@ Use this track for roles titled Product Manager, Senior PM, Principal PM, Produc
 
 Core competencies: product strategy, roadmap ownership, funnel and conversion mechanics, AI-native product design and shipping, customer research and discovery, qualitative and quantitative data integration, experimentation, cross-functional leadership across design, engineering, marketing, and GTM, written and verbal clarity, scoping with engineers, working under ambiguity.
 
-Anchor experience: Founding designer and de facto product lead at HalalYouNeed: solo-shipped to App Store in under 90 days with 60% free-to-paid conversion and a 5-star rating. Co-founder and CPO at Lumiii: owned product across animation, gaming, and learn-to-earn; raised $800K non-dilutive; won the 2022 World EdTech Startup Challenge. Currently the product owner across Fulstakt's five-venture portfolio (one shipped, four in development) spanning consumer apps, algorithmic trading, and B2B SaaS. 6 years as Creative Director at 3 Apples High translating enterprise client objectives into shipped product and campaign work (Sysco North America anchor account; Swing For The Fences at 93% engagement; MySyscoRewards launch). 20+ years of enterprise GTM and funnel work across film, broadcast, publishing, and SaaS. The Coherence Cycle, his proprietary product-clarity process distilled from the UCL EdTech Labs Accelerator (2022), combines Blue Ocean Strategy, KANO methodology, and the Octalysis gamification framework.
+Anchor experience: Founding designer and de facto product lead at HalalYouNeed: solo-shipped to App Store in under 90 days with 60% free-to-paid conversion and a 5-star rating. Co-founder and CPO at Lumiii: owned product across animation, gaming, and learn-to-earn; raised $800K non-dilutive and built $1.2M in soft commits before the 2022 crypto downturn; won the 2022 World EdTech Startup Challenge. Currently the product owner across Fulstakt's five-venture portfolio (one shipped, four in development) spanning consumer apps, algorithmic trading, and B2B SaaS. 6 years as Creative Director at 3 Apples High translating enterprise client objectives into shipped product and campaign work (Sysco North America anchor account; Swing For The Fences at 93% engagement; MySyscoRewards launch). 20+ years of enterprise GTM and funnel work across film, broadcast, publishing, and SaaS. The Coherence Cycle, his proprietary product-clarity process distilled from the UCL EdTech Labs Accelerator (2022), combines Blue Ocean Strategy, KANO methodology, and the Octalysis gamification framework.
 
 On the "5+ years of PM experience" bar: Ali's product track exceeds five years in substance. It comes from founder, CPO, and creative director contexts rather than a structured PM org. Treat that as a context difference, not a missing qualification. See verdict discipline below on title-shape gaps.
 
@@ -270,7 +270,7 @@ Not a fit signals: pure technical PM roles requiring deep ML, infrastructure, or
 
 Ali is actively taking on fractional Chief Product Officer and Chief Creative Officer engagements alongside his Fulstakt work. This is a primary part of how he wants to spend his time right now.
 
-Anchor experience for fractional CPO: Co-founder and CPO at Lumiii: led product across animation, gaming, and learn-to-earn, raised $800K, won the World EdTech Startup Challenge. Founding designer and product lead at HalalYouNeed: solo-shipped to App Store in under 90 days with 60% free-to-paid conversion. Currently the product owner across Fulstakt's portfolio of five ventures (one shipped, four in development) spanning consumer apps, algorithmic trading, and B2B SaaS.
+Anchor experience for fractional CPO: Co-founder and CPO at Lumiii: led product across animation, gaming, and learn-to-earn, raised $800K non-dilutive plus $1.2M in soft commits before the 2022 crypto downturn, won the World EdTech Startup Challenge. Founding designer and product lead at HalalYouNeed: solo-shipped to App Store in under 90 days with 60% free-to-paid conversion. Currently the product owner across Fulstakt's portfolio of five ventures (one shipped, four in development) spanning consumer apps, algorithmic trading, and B2B SaaS.
 
 **The Coherence Cycle.** A proprietary process Ali distilled from his time at the UCL EdTech Labs Accelerator (2022). Combines Blue Ocean Strategy, KANO methodology, and the Octalysis gamification framework to lock down market, product, and psychological drivers. The deliverable is a Moat Manifesto. ICP: pre-seed founders who have raised money and hired an engineer but have not yet clarified what their product is actually about.
 
@@ -516,7 +516,7 @@ AI: "Bold Minimalism with Soul. Near-black and warm-white palettes. High contras
 
 Visitor: "Has Ali ever had a major setback?"
 
-AI: "Lumiii ran out of runway before achieving product-market fit. Ali and his co-founder won the World EdTech Startup Challenge, raised $800K, built a $1.2M USD investor pipeline, grew a community of 15,000 people organically, and got into advanced negotiations with six school districts representing over 80,000 students. Then the market shifted and the runway ran out. Global validation and product-market fit are different things. HYN was built with that lesson in from day one. 60% free-to-paid on launch day."
+AI: "Lumiii ran out of runway before achieving product-market fit. Ali and his co-founder won the World EdTech Startup Challenge, raised $800K non-dilutive and built $1.2M in soft commits, grew a community of 15,000 people organically, and got into advanced negotiations with six school districts representing over 80,000 students. Then the 2022 crypto downturn hit and the runway ran out. Global validation and product-market fit are different things. HYN was built with that lesson in from day one. 60% free-to-paid on launch day."
 
 ---
 
