@@ -1,12 +1,11 @@
 import BusinessLogos from "@/components/BusinessLogos";
-import Coaching from "@/components/Coaching";
 import HeroAnimated from "@/components/HeroAnimated";
 import MagneticCard from "@/components/MagneticCard";
 import ParallaxPhoto from "@/components/ParallaxPhoto";
+import PracticeGate from "@/components/PracticeGate";
 import PromiseTricolon from "@/components/PromiseTricolon";
 import Reveal from "@/components/Reveal";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
-import ThePractice from "@/components/ThePractice";
 import MaskedHeading from "@/components/motion/MaskedHeading";
 import EyebrowUnderline from "@/components/motion/EyebrowUnderline";
 import DividerDraw from "@/components/motion/DividerDraw";
@@ -107,57 +106,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="proof" className="section-bone relative px-6 py-20 md:py-32">
+      <section id="the-proof" className="section-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-14 md:mb-20">
-            <EyebrowUnderline className="mb-6">Testimonials</EyebrowUnderline>
-          </div>
-          <Reveal className="mb-20 md:mb-28">
-            <TestimonialsCarousel />
-          </Reveal>
-          <DividerDraw className="mb-20 md:mb-28" />
-          <Reveal>
-            <BusinessLogos />
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="the-practice" className="section-ink fade-from-bone relative px-6 py-20 md:py-32">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-14 md:mb-20">
-            <EyebrowUnderline className="mb-6">The Practice</EyebrowUnderline>
-            <MaskedHeading
-              as="h2"
-              className="heading-display max-w-3xl"
-              lines={["Three depths.", "One method."]}
-            />
-          </div>
-          <Reveal>
-            <ThePractice />
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="coaching" className="section-bone fade-from-ink relative px-6 py-20 md:py-32">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-14 md:mb-20">
-            <EyebrowUnderline className="mb-6">Coaching</EyebrowUnderline>
-          </div>
-          <Reveal>
-            <Coaching />
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="case-studies" className="section-bone relative px-6 py-20 md:py-32">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-14 md:mb-20">
-            <EyebrowUnderline className="mb-6">Case Studies</EyebrowUnderline>
+            <EyebrowUnderline className="mb-6">The Proof</EyebrowUnderline>
             <MaskedHeading as="h2" className="heading-display max-w-3xl">
               End-to-end product design, development, and go-to-market.
             </MaskedHeading>
           </div>
-          <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-20 md:mb-28">
 
             <MagneticCard href="/work/halalyouneed" className="group relative aspect-square overflow-hidden rounded-2xl block">
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105" style={{ background: "linear-gradient(135deg, #0d0303 0%, #4a0f0f 60%, #bb3535 100%)" }} />
@@ -223,6 +180,34 @@ export default function Home() {
             </MagneticCard>
 
           </Reveal>
+
+          <DividerDraw className="mb-20 md:mb-28" />
+
+          <Reveal>
+            <BusinessLogos />
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="the-praise" className="section-bone relative px-6 py-20 md:py-32">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14 md:mb-20">
+            <EyebrowUnderline className="mb-6">The Praise</EyebrowUnderline>
+          </div>
+          <Reveal>
+            <TestimonialsCarousel />
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="the-practice" className="section-ink fade-from-bone relative px-6 py-20 md:py-32">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14 md:mb-20">
+            <EyebrowUnderline className="mb-6">The Practice</EyebrowUnderline>
+          </div>
+          <Reveal>
+            <PracticeGate />
+          </Reveal>
         </div>
       </section>
 
@@ -230,7 +215,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto w-full">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div className="space-y-6">
-              <EyebrowUnderline color="#ffffff">Track Record</EyebrowUnderline>
+              <EyebrowUnderline color="#ffffff">The Prerequisites</EyebrowUnderline>
               <MaskedHeading
                 as="h2"
                 className="heading-display text-white"
