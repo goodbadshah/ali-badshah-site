@@ -50,6 +50,10 @@ export default function HeroChat() {
   }, [])
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+    // Avoid programmatic focus on touch devices: it suppresses both the OS keyboard
+    // (and its native caret) and our faux caret, leaving the input with no blinker.
+    if (window.matchMedia('(pointer: coarse)').matches) return
     inputRef.current?.focus({ preventScroll: true })
   }, [])
 
@@ -229,7 +233,8 @@ export default function HeroChat() {
             role="log"
             aria-busy={isBusy}
             aria-live="polite"
-            className="max-h-80 md:max-h-[480px] lg:max-h-[60vh] overflow-y-auto pr-1 space-y-4"
+            data-lenis-prevent
+            className="max-h-80 md:max-h-[480px] lg:max-h-[60vh] overflow-y-auto overscroll-contain pr-1 space-y-4"
           >
             {messages.map((m, i) => (
               <div key={i} className={m.role === 'user' ? 'flex justify-end' : 'flex justify-start'}>
