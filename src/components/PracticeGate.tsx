@@ -105,13 +105,13 @@ export default function PracticeGate() {
           <h2
             id="modal-build-heading"
             className="heading-display"
-            style={{ color: 'var(--ink)' }}
+            style={{ color: 'var(--bone)' }}
           >
             {DOORS.build.heading}
           </h2>
           <p
             className="body-base mt-4"
-            style={{ color: 'var(--ink)', opacity: 0.7 }}
+            style={{ color: 'var(--bone)', opacity: 0.7 }}
           >
             {DOORS.build.subheading}
           </p>
@@ -128,13 +128,13 @@ export default function PracticeGate() {
           <h2
             id="modal-work-heading"
             className="heading-display"
-            style={{ color: 'var(--ink)' }}
+            style={{ color: 'var(--bone)' }}
           >
             {DOORS.work.heading}
           </h2>
           <p
             className="body-base mt-4"
-            style={{ color: 'var(--ink)', opacity: 0.7 }}
+            style={{ color: 'var(--bone)', opacity: 0.7 }}
           >
             {DOORS.work.subheading}
           </p>

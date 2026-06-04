@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Ticker from "@/components/Ticker";
 import Header from "@/components/Header";
+import RightTabCTA from "@/components/RightTabCTA";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <SmoothScrollProvider />
         <Header />
         <Ticker />
+        <RightTabCTA />
         {children}
       </body>
     </html>

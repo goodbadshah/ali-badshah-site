@@ -244,7 +244,7 @@ export default function HeroAnimated({ tagline }: { tagline: ReactNode }) {
           <AnimatedHeading reduced={reduced} />
           <motion.p
             variants={blockVariants}
-            className="text-base md:text-lg text-white/80 font-medium leading-relaxed"
+            className="body-base-lg text-white/85"
           >
             {tagline}
           </motion.p>

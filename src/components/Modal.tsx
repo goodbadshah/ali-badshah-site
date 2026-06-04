@@ -1,7 +1,8 @@
 'use client'
 
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
-import { useCallback, useEffect, useRef, type ReactNode } from 'react'
+import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 
 type Props = {
   open: boolean
@@ -17,6 +18,11 @@ export default function Modal({ open, onClose, labelledBy, children }: Props) {
   const reduced = useReducedMotion() ?? false
   const panelRef = useRef<HTMLDivElement>(null)
   const lastActiveRef = useRef<HTMLElement | null>(null)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
@@ -65,7 +71,9 @@ export default function Modal({ open, onClose, labelledBy, children }: Props) {
     }
   }, [open, handleKey])
 
-  return (
+  if (!mounted) return null
+
+  return createPortal(
     <AnimatePresence>
       {open ? (
         <motion.div
@@ -81,7 +89,7 @@ export default function Modal({ open, onClose, labelledBy, children }: Props) {
             aria-label="Close"
             onClick={onClose}
             className="absolute inset-0 w-full h-full cursor-default"
-            style={{ background: 'rgba(20, 17, 15, 0.72)', backdropFilter: 'blur(6px)' }}
+            style={{ background: 'rgba(5, 4, 4, 0.65)', backdropFilter: 'blur(24px) saturate(0.6)' }}
             initial={reduced ? false : { opacity: 0 }}
             animate={reduced ? undefined : { opacity: 1 }}
             exit={reduced ? undefined : { opacity: 0 }}
@@ -92,27 +100,32 @@ export default function Modal({ open, onClose, labelledBy, children }: Props) {
             role="dialog"
             aria-modal="true"
             aria-labelledby={labelledBy}
-            className="relative z-10 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl"
-            style={{ background: 'var(--bone)' }}
-            initial={reduced ? false : { opacity: 0, y: 24, scale: 0.98 }}
+            className="relative z-10 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl"
+            style={{ 
+              background: 'radial-gradient(circle at 50% -20%, rgba(187, 53, 53, 0.15), var(--ink))', 
+              boxShadow: '0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 40px 100px -20px rgba(0, 0, 0, 0.9)'
+            }}
+            initial={reduced ? false : { opacity: 0, y: 32, scale: 0.95 }}
             animate={reduced ? undefined : { opacity: 1, y: 0, scale: 1 }}
             exit={reduced ? undefined : { opacity: 0, y: 24, scale: 0.98 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ type: 'spring', damping: 24, stiffness: 280 }}
           >
-            <button
+            <motion.button
               type="button"
               onClick={onClose}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               aria-label="Close modal"
               className="absolute top-5 right-5 z-20 w-10 h-10 rounded-full flex items-center justify-center transition-colors"
               style={{
-                background: 'rgba(20, 17, 15, 0.06)',
-                color: 'var(--ink)',
+                background: 'rgba(255, 255, 255, 0.08)',
+                color: 'var(--bone)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(20, 17, 15, 0.12)'
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(20, 17, 15, 0.06)'
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'
               }}
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -123,11 +136,12 @@ export default function Modal({ open, onClose, labelledBy, children }: Props) {
                   strokeLinecap="round"
                 />
               </svg>
-            </button>
+            </motion.button>
             <div className="p-7 md:p-12">{children}</div>
           </motion.div>
         </motion.div>
       ) : null}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   )
 }

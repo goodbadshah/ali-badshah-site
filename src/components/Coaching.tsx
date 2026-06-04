@@ -1,13 +1,13 @@
 'use client'
 
-import { motion, useReducedMotion } from 'motion/react'
-import { useMagnetic } from '@/lib/useMagnetic'
+import { motion } from 'motion/react'
 
 type Track = {
   id: string
   eyebrow: string
   description: string
   consultUrl: string
+  ctaLabel: string
 }
 
 // TODO: Replace each consultUrl with the real Calendly link for that track.
@@ -19,6 +19,7 @@ const TRACKS: Track[] = [
     description:
       'Founders, operators, and professionals navigating career pivots who need to think more clearly about what they are building and why.',
     consultUrl: 'https://calendly.com/your-handle/strategic-consult',
+    ctaLabel: 'Schedule',
   },
   {
     id: 'creative',
@@ -26,6 +27,7 @@ const TRACKS: Track[] = [
     description:
       'Artists, writers, performers, and makers who are stuck, scared, or sitting on something that needs to get out.',
     consultUrl: 'https://calendly.com/your-handle/creative-consult',
+    ctaLabel: "Schedule",
   },
   {
     id: 'personal',
@@ -33,6 +35,7 @@ const TRACKS: Track[] = [
     description:
       'People navigating divorce, estrangement, loss, or the slow erosion of self-worth.',
     consultUrl: 'https://calendly.com/your-handle/personal-consult',
+    ctaLabel: 'Schedule',
   },
   {
     id: 'transformational',
@@ -40,6 +43,7 @@ const TRACKS: Track[] = [
     description:
       'Identity-level work for people who sense that the version of themselves that got them here will not get them where they are going.',
     consultUrl: 'https://calendly.com/your-handle/transformational-consult',
+    ctaLabel: 'Explore',
   },
 ]
 
@@ -51,7 +55,7 @@ function TrackContent({ track }: { track: Track }) {
       </p>
       <p
         className="body-base flex-1 mb-7"
-        style={{ color: 'var(--ink)', opacity: 0.78 }}
+        style={{ color: 'var(--bone)', opacity: 0.8 }}
       >
         {track.description}
       </p>
@@ -59,68 +63,40 @@ function TrackContent({ track }: { track: Track }) {
         href={track.consultUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 self-start text-sm font-bold uppercase tracking-widest pb-1 transition-colors"
+        className="inline-flex items-center gap-2 self-start text-[0.9rem] font-bold tracking-wide pb-1 transition-colors mt-auto group"
         style={{
-          color: 'var(--ink)',
-          borderBottom: '1px solid rgba(20, 17, 15, 0.4)',
+          color: 'var(--bone)',
+          borderBottom: '1.5px solid rgba(255, 255, 255, 0.4)',
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.color = 'var(--red-hero)'
           e.currentTarget.style.borderBottomColor = 'var(--red-hero)'
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.color = 'var(--ink)'
-          e.currentTarget.style.borderBottomColor = 'rgba(20, 17, 15, 0.4)'
+          e.currentTarget.style.color = 'var(--bone)'
+          e.currentTarget.style.borderBottomColor = 'rgba(255, 255, 255, 0.4)'
         }}
       >
-        Book a 15-min consult
-        <span aria-hidden="true">→</span>
+        {track.ctaLabel}
+        <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
       </a>
     </>
   )
 }
 
 function TrackCard({ track }: { track: Track }) {
-  const magnet = useMagnetic({
-    maxOffset: 8,
-    tiltDegrees: 3,
-    innerParallaxRange: 4,
-  })
-
   const cardStyle = {
-    background: 'var(--bone)',
-    border: '1px solid rgba(20, 17, 15, 0.12)',
+    background: 'rgba(255, 255, 255, 0.03)',
+    border: '1px solid rgba(255, 255, 255, 0.1)',
     borderRadius: '28px',
-  }
-
-  if (magnet.reduced) {
-    return (
-      <div
-        id={`coaching-${track.id}`}
-        className="relative flex flex-col h-full p-7 md:p-8"
-        style={cardStyle}
-      >
-        <TrackContent track={track} />
-      </div>
-    )
   }
 
   return (
     <motion.div
-      ref={magnet.ref as React.RefObject<HTMLDivElement>}
       id={`coaching-${track.id}`}
-      onPointerLeave={magnet.onPointerLeave}
-      onPointerMove={magnet.onPointerMove}
-      className="relative flex flex-col h-full p-7 md:p-8"
-      style={{
-        ...cardStyle,
-        x: magnet.x,
-        y: magnet.y,
-        rotateX: magnet.rotateX,
-        rotateY: magnet.rotateY,
-        transformStyle: 'preserve-3d',
-        willChange: 'transform',
-      }}
+      whileHover={{ y: -4, backgroundColor: 'rgba(255,255,255,0.05)' }}
+      className="relative flex flex-col h-full p-7 md:p-8 transition-colors"
+      style={cardStyle}
     >
       <TrackContent track={track} />
     </motion.div>
@@ -128,16 +104,21 @@ function TrackCard({ track }: { track: Track }) {
 }
 
 export default function Coaching() {
-  const reduced = useReducedMotion() ?? false
-
   return (
-    <div
+    <motion.div
       className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6"
-      style={{ perspective: reduced ? undefined : 1200 }}
+      variants={{
+        visible: { transition: { staggerChildren: 0.1 } },
+        hidden: {},
+      }}
+      initial="hidden"
+      animate="visible"
     >
       {TRACKS.map((track) => (
-        <TrackCard key={track.id} track={track} />
+        <motion.div key={track.id} variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
+          <TrackCard track={track} />
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   )
 }

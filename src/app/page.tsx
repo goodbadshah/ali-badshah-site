@@ -32,7 +32,7 @@ export default function Home() {
       <section id="the-promise" className="section-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-10 md:mb-12">
-            <EyebrowUnderline className="mb-6">The Promise</EyebrowUnderline>
+            <EyebrowUnderline className="mb-6" size="lg">The Promise</EyebrowUnderline>
             <MaskedHeading as="h2" className="heading-display max-w-5xl">
               I help companies build validated and defensible products using my proprietary
               method, the Moat Manifesto.
@@ -46,7 +46,7 @@ export default function Home() {
           <DividerDraw className="mb-20 md:mb-28" />
 
           <div className="mb-20 md:mb-28">
-            <EyebrowUnderline className="mb-8">Who this is for</EyebrowUnderline>
+            <EyebrowUnderline className="mb-8" underline={false}>Who this is for</EyebrowUnderline>
             <Reveal>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 max-w-5xl">
                 <div>
@@ -93,7 +93,7 @@ export default function Home() {
           <DividerDraw className="mb-20 md:mb-28" />
 
           <div>
-            <EyebrowUnderline className="mb-6">What you get</EyebrowUnderline>
+            <EyebrowUnderline className="mb-6" underline={false}>What you get</EyebrowUnderline>
             <MaskedHeading as="h3" className="heading-display mb-6" lines={["Taste & Clarity."]} />
             <Reveal>
               <p className="body-base-lg max-w-3xl" style={{ opacity: 0.75 }}>
@@ -109,7 +109,7 @@ export default function Home() {
       <section id="the-proof" className="section-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-14 md:mb-20">
-            <EyebrowUnderline className="mb-6">The Proof</EyebrowUnderline>
+            <EyebrowUnderline className="mb-6" size="lg">The Proof</EyebrowUnderline>
             <MaskedHeading as="h2" className="heading-display max-w-3xl">
               End-to-end product design, development, and go-to-market.
             </MaskedHeading>
@@ -192,7 +192,7 @@ export default function Home() {
       <section id="the-praise" className="section-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-14 md:mb-20">
-            <EyebrowUnderline className="mb-6">The Praise</EyebrowUnderline>
+            <EyebrowUnderline className="mb-6" size="lg">The Praise</EyebrowUnderline>
           </div>
           <Reveal>
             <TestimonialsCarousel />
@@ -203,7 +203,7 @@ export default function Home() {
       <section id="the-practice" className="section-ink fade-from-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-14 md:mb-20">
-            <EyebrowUnderline className="mb-6">The Practice</EyebrowUnderline>
+            <EyebrowUnderline className="mb-6" size="lg">The Practice</EyebrowUnderline>
           </div>
           <Reveal>
             <PracticeGate />
@@ -215,7 +215,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto w-full">
           <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <div className="space-y-6">
-              <EyebrowUnderline color="#ffffff">The Prerequisites</EyebrowUnderline>
+              <EyebrowUnderline color="#ffffff" size="lg">The Prerequisites</EyebrowUnderline>
               <MaskedHeading
                 as="h2"
                 className="heading-display text-white"
