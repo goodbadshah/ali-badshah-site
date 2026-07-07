@@ -5,7 +5,7 @@ import ParallaxPhoto from "@/components/ParallaxPhoto";
 import PracticeGate from "@/components/PracticeGate";
 import PromiseTricolon from "@/components/PromiseTricolon";
 import Reveal from "@/components/Reveal";
-import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+// import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import MaskedHeading from "@/components/motion/MaskedHeading";
 import EyebrowUnderline from "@/components/motion/EyebrowUnderline";
 import DividerDraw from "@/components/motion/DividerDraw";
@@ -189,6 +189,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/*
       <section id="the-praise" className="section-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-14 md:mb-20">
@@ -199,6 +200,7 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+      */}
 
       <section id="the-practice" className="section-ink fade-from-bone relative px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto">
